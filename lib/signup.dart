@@ -37,12 +37,13 @@ class _SignUpPageState extends State<SignUpPage> {
           child: Column(
             children: <Widget>[
               Image.asset("images/tour.png", height: 80,),
+              SizedBox(height: 25,),
               Column(
                 children: const [
                   Text(
                     "Welcome!",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
-                 textAlign:TextAlign.left, ),
+                 ),
                   SizedBox(height: 3,),
                   Text("Sign up to optimize your tourism experience ",
                     style: TextStyle(
@@ -131,55 +132,58 @@ class _SignUpPageState extends State<SignUpPage> {
                             style: TextButton.styleFrom(
                                 backgroundColor: Colors.deepPurpleAccent,
                                 padding: const EdgeInsets.symmetric(
-                                    vertical: 5, horizontal: 100)
+                                    vertical: 5, horizontal: 80)
                             ),
                             onPressed: () async {
                     if (_formKey.currentState!.validate()) {
                       setState(() {
                        isloading = true;});
-                      if(isChecked != true) {
+                      //if(isChecked != true) {
                         setState(() => showErrorMessage = true);
+                     // }
+                      if(isChecked) {
+                        try {
+                          await auth.createUserWithEmailAndPassword(
+                              email: email, password: password);
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              backgroundColor: Colors.blueGrey,
+                              content: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                    'Sucessfully Registered.You Can Login Now'),
+                              ),
+                              duration: Duration(seconds: 10),
+                            ),
+                          );
+                          //Navigator.of(context).pop();
+                          Navigator.push(
+                              context, MaterialPageRoute(
+                              builder: (context) => SignInPage())
+                          );
+                          setState(() {
+                            isloading = false;
+                          });
+                        } on FirebaseAuthException catch (e) {
+                          showDialog(
+                            context: context,
+                            builder: (ctx) =>
+                                AlertDialog(
+                                  title:
+                                  Text(' Ops! Registration Failed'),
+                                  content: Text('${e.message}'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.of(ctx).pop();
+                                      },
+                                      child: Text('Okay'),
+                                    )
+                                  ],
+                                ),
+                          );
+                        }
                       }
-    try {
-    await auth.createUserWithEmailAndPassword(
-    email: email, password: password);
-    ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(
-    backgroundColor: Colors.blueGrey,
-    content: Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Text(
-    'Sucessfully Registered.You Can Login Now'),
-    ),
-    duration: Duration(seconds: 10),
-    ),
-    );
-    //Navigator.of(context).pop();
-    Navigator.push(
-        context, MaterialPageRoute(builder: (context) => SignInPage())
-    );
-    setState(() {
-    isloading = false;
-    });
-    } on FirebaseAuthException catch (e) {
-    showDialog(
-    context: context,
-    builder: (ctx) => AlertDialog(
-    title:
-    Text(' Ops! Registration Failed'),
-    content: Text('${e.message}'),
-    actions: [
-    TextButton(
-    onPressed: () {
-    Navigator.of(ctx).pop();
-    },
-    child: Text('Okay'),
-    )
-    ],
-    ),
-    );
-    }
-
                     }
                             }, child: const Text("Sign Up"),
 

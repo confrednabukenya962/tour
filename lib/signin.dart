@@ -36,10 +36,11 @@ class _SignInPageState extends State<SignInPage> {
 
       body:SafeArea(
         child: Container(
-          padding: const EdgeInsets.all(32),
+          padding: const EdgeInsets.all(30),
           child: Column(
             children:<Widget> [
               Image.asset("images/tour.png",height: 80,),
+              SizedBox(height: 25,),
               Column(
                 children:const [
                   Text(
@@ -100,7 +101,7 @@ class _SignInPageState extends State<SignInPage> {
                         child: ElevatedButton(
                             style: TextButton.styleFrom(
                                 backgroundColor: Colors.deepPurpleAccent,
-                                padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 100)
+                                padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 80)
                             ),
                             onPressed: () async {
     if (_formKey.currentState!.validate()) {
@@ -214,15 +215,18 @@ class _PasswordResetState extends State<PasswordReset> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset("images/tour.png",height: 80,),
-          const SizedBox(height: 5,),
+          const SizedBox(height: 25,),
           const Text("Password Reset",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),
+            textAlign: TextAlign.left,
           ),
 
           Container(
+            padding: const EdgeInsets.all(25),
             child: Form(
               key:_formKey,
               child: Column(
@@ -249,7 +253,7 @@ class _PasswordResetState extends State<PasswordReset> {
                     child: ElevatedButton(
                         style: TextButton.styleFrom(
                             backgroundColor: Colors.deepPurpleAccent,
-                            padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 135)
+                            padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 95)
                         ),
                         onPressed: (){
                           if(_formKey.currentState!.validate()) {
@@ -259,18 +263,21 @@ class _PasswordResetState extends State<PasswordReset> {
                         //
                         child:  const Text("Submit")),
                   ),
+                   //const Padding(
+                       //padding: EdgeInsets.all(12),
                   const Text("A one time password will be sent to your email account. Use it to sign in ",
                     style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15
+                        //color: Colors.black,
+                        //fontSize: 15
                     ),
                   ),
+           // ),
 
                   Center(
                     child: ElevatedButton(
                         style: TextButton.styleFrom(
                             backgroundColor: Colors.deepPurpleAccent,
-                            padding:  const EdgeInsets.symmetric(vertical: 5,horizontal: 110)
+                            padding:  const EdgeInsets.symmetric(vertical: 5,horizontal: 70)
                         ),
                         onPressed: (){
                           Navigator.push(context,MaterialPageRoute(builder: (context)=>SignInPage()));

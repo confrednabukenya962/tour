@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tour/main.dart';
 import 'package:tour/signin.dart';
 import 'package:tour/signup.dart';
+import 'package:tour/tourrecommender.dart';
+//import 'package:tour/tour_recommender.dart';
 
 class DashBoard extends StatefulWidget {
   const DashBoard({Key? key}) : super(key: key);
@@ -48,7 +50,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>const SignInPage()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>TourRecommenderPage()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(
