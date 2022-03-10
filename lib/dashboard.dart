@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tour/main.dart';
+//import 'package:tour/servicereviews.dart';
+import 'package:tour/servicereviews.dart';
 import 'package:tour/signin.dart';
 import 'package:tour/signup.dart';
 import 'package:tour/tourrecommender.dart';
@@ -36,7 +38,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>const SignInPage()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const TourRecommenderPage()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(
@@ -50,7 +52,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>TourRecommenderPage()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const SignInPage()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(
@@ -134,7 +136,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>SignInPage()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>ServiceReviews1()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(

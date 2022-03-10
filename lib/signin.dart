@@ -119,7 +119,7 @@ class _SignInPageState extends State<SignInPage> {
           child: Text(
               'You have logged in successfully'),
         ),
-        duration: Duration(seconds: 10),
+        duration: Duration(seconds: 3),
       ),
     );
     Navigator.push(
