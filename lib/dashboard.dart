@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tour/culture&entertainment.dart';
 import 'package:tour/main.dart';
 //import 'package:tour/servicereviews.dart';
 import 'package:tour/servicereviews.dart';
@@ -19,7 +20,7 @@ class _DashBoardState extends State<DashBoard> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(35.0),
         child: Container(child: GridView(children: [
           InkWell(
             onTap: (){
@@ -66,7 +67,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>SignUpPage()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const SignUpPage()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(
@@ -80,7 +81,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>PasswordReset()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const PasswordReset()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(
@@ -94,7 +95,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>SignInPage()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const SignInPage()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(
@@ -108,7 +109,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>const SplashScreen()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const CultureEntertainment()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(
@@ -136,7 +137,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>ServiceReviews1()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const ServiceReviews1()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(
@@ -150,7 +151,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>SplashScreen()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const SplashScreen()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(

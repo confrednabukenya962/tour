@@ -14,16 +14,7 @@ class SignInPage extends StatefulWidget {
 class _SignInPageState extends State<SignInPage> {
   final _formKey = GlobalKey<FormState>();
   final auth =FirebaseAuth.instance;
-  //final emailController =TextEditingController();
-  //final passwordController =TextEditingController();
 
-  //@override
-  //void dispose(){
-  // emailController.dispose();
-  //passwordController.dispose();
-
-  //super.dispose();
-  //}
   bool isloading = false;
   String email = '';
   String password = '';
@@ -40,7 +31,7 @@ class _SignInPageState extends State<SignInPage> {
           child: Column(
             children:<Widget> [
               Image.asset("images/tour.png",height: 80,),
-              SizedBox(height: 25,),
+              const SizedBox(height: 25,),
               Column(
                 children:const [
                   Text(
@@ -100,7 +91,7 @@ class _SignInPageState extends State<SignInPage> {
                       Center(
                         child: ElevatedButton(
                             style: TextButton.styleFrom(
-                                backgroundColor: Colors.deepPurpleAccent,
+                                backgroundColor: const Color(0XFF2A351F),
                                 padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 80)
                             ),
                             onPressed: () async {
@@ -112,10 +103,10 @@ class _SignInPageState extends State<SignInPage> {
     await auth.signInWithEmailAndPassword(
     email: email, password: password);
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
+      const SnackBar(
         backgroundColor: Colors.blueGrey,
         content: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Text(
               'You have logged in successfully'),
         ),
@@ -123,7 +114,7 @@ class _SignInPageState extends State<SignInPage> {
       ),
     );
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => DashBoard()));
+        context, MaterialPageRoute(builder: (context) => const DashBoard()));
     setState(() {
       isloading = false;
     });
@@ -131,14 +122,14 @@ class _SignInPageState extends State<SignInPage> {
     showDialog(
     context: context,
     builder: (ctx) => AlertDialog(
-    title: Text("Ops! Login Failed"),
+    title: const Text("Ops! Login Failed"),
     content: Text('${e.message}'),
     actions: [
     TextButton(
     onPressed: () {
     Navigator.of(ctx).pop();
     },
-    child: Text('okay'),
+    child: const Text('okay'),
     )
     ],
     ),
@@ -149,7 +140,7 @@ class _SignInPageState extends State<SignInPage> {
     isloading = false;
     });
     }
-    },child: Text('Sign in'),
+    },child: const Text('Sign in'),
     ),
 
     ),
@@ -158,7 +149,7 @@ class _SignInPageState extends State<SignInPage> {
   children: [
     const Text("New User?"),
   TextButton(onPressed: (){
-    Navigator.push(context,MaterialPageRoute(builder: (context)=>SignUpPage()));
+    Navigator.push(context,MaterialPageRoute(builder: (context)=>const SignUpPage()));
                           }, child: const Text("Sign Up"))
                         ],
                       )
@@ -170,22 +161,6 @@ class _SignInPageState extends State<SignInPage> {
 
               ),
 
-
-
-              //Future signIn() async{
-              // showDialog(
-              // context: context,
-              // barrierDismissible: false,
-              // builder: builder)
-              // try{
-              // await FirebaseAuth.instance.signInWithEmailAndPassword(
-              //email: emailController.text.trim(),
-              //password: passwordController.text.trim(),
-              // );
-              //}on FirebaseAuthException catch (e) {
-              //print(e);
-              //}
-              // },
             ],
           ),
         ),
@@ -252,7 +227,7 @@ class _PasswordResetState extends State<PasswordReset> {
                   Center(
                     child: ElevatedButton(
                         style: TextButton.styleFrom(
-                            backgroundColor: Colors.deepPurpleAccent,
+                            backgroundColor: const Color(0XFF2A351F),
                             padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 95)
                         ),
                         onPressed: (){
@@ -276,7 +251,7 @@ class _PasswordResetState extends State<PasswordReset> {
                   Center(
                     child: ElevatedButton(
                         style: TextButton.styleFrom(
-                            backgroundColor: Colors.deepPurpleAccent,
+                            backgroundColor: const Color(0XFF2A351F),
                             padding:  const EdgeInsets.symmetric(vertical: 5,horizontal: 70)
                         ),
                         onPressed: (){

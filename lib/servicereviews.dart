@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tour/reviewaservice.dart';
 import 'package:tour/signin.dart';
 //import 'package:draggable_fab/draggable_fab.dart';
 
@@ -21,7 +22,7 @@ class _ServiceReviews1State extends State<ServiceReviews1> {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: Text("Service reviews",
+          title: const Text("Service reviews",
             style: TextStyle(color: Colors.black,
             ),
           ),
@@ -32,7 +33,7 @@ class _ServiceReviews1State extends State<ServiceReviews1> {
               child: Column(
                 //mainAxisAlignment: MainAxisAlignment.center,
                 children:  [
-                  SizedBox(height: 18,),
+                  const SizedBox(height: 18,),
                   const Padding(
                     padding:  EdgeInsets.only(left: 30.0,right: 45.0),
                     child: Text(
@@ -45,7 +46,7 @@ class _ServiceReviews1State extends State<ServiceReviews1> {
                       ),
                     ),
                   ),
-        SizedBox(height: 35,),
+        const SizedBox(height: 35,),
         Align(
           alignment: Alignment.center,
 
@@ -56,7 +57,7 @@ class _ServiceReviews1State extends State<ServiceReviews1> {
               highlightElevation: 10,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => SignInPage()));
+                    builder: (context) => const ReviewService()));
               }),
         ),
                 ],
@@ -78,13 +79,13 @@ class _ServiceReviews1State extends State<ServiceReviews1> {
     // backgroundColor: Colors.green,
     highlightElevation: 10,
 
-    child: Icon(Icons.add),
+    child: const Icon(Icons.add),
     foregroundColor: Colors.black,
     backgroundColor:Colors.greenAccent,
 
     onPressed: (){
       Navigator.push(context, MaterialPageRoute(
-          builder: (context) => SignInPage()));
+          builder: (context) => const SignInPage()));
     },
     //mini: true,
   );

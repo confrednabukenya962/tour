@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class TourRecommenderPage extends StatefulWidget {
   const TourRecommenderPage({Key? key}) : super(key: key);
 
@@ -33,14 +34,14 @@ class _TourRecommenderPageState extends State<TourRecommenderPage> {
           padding: const EdgeInsets.all(32),
           child: Column(
             children:  [
-              SizedBox(height: 35,),
-                Text(
+              const SizedBox(height: 35,),
+                const Text(
                   "Tour Recommender",
                   style: TextStyle( fontWeight: FontWeight.bold,fontSize: 20,
                     color: Colors.deepPurple,),
                 ),
-              SizedBox(height: 10,),
-              Text("Select items for your preferred tourism experience ",
+              const SizedBox(height: 10,),
+              const Text("Select items for your preferred tourism experience ",
                   style: TextStyle(
                       color: Colors.deepPurpleAccent,
                       fontSize: 15
@@ -55,17 +56,16 @@ class _TourRecommenderPageState extends State<TourRecommenderPage> {
 
                  ...notifications.map(buildSingleCheckbox).toList(),
                ],
-                padding: EdgeInsets.all(1),
+                padding: const EdgeInsets.all(1),
               ),
-              SizedBox(height: 25,),
+              const SizedBox(height: 25,),
               Center(
                 child: ElevatedButton(
                     style: TextButton.styleFrom(
-                        backgroundColor: Colors.deepPurpleAccent,
-                        padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 25)
+                        backgroundColor: const Color(0XFF2A351F),
+                        padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 80)
                     ),
-                    onPressed: (){
-                      },
+                    onPressed: () {},
                     child:  const Text("Recommend")),
               ),
             ],
@@ -85,7 +85,7 @@ class _TourRecommenderPageState extends State<TourRecommenderPage> {
   Widget buildSingleCheckbox(CheckBoxState checkbox) => CheckboxListTile(
     controlAffinity: ListTileControlAffinity.leading,
     value: checkbox.value,
-    title: Text(checkbox.title,style: TextStyle(fontSize: 15),),
+    title: Text(checkbox.title,style: const TextStyle(fontSize: 15),),
     onChanged: (value) =>setState(()=> checkbox.value =value!),
   );
 }

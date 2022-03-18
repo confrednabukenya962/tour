@@ -130,7 +130,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       Center(
                         child: ElevatedButton(
                             style: TextButton.styleFrom(
-                                backgroundColor: Colors.deepPurpleAccent,
+                                backgroundColor: const Color(0XFF2A351F),
                                 padding: const EdgeInsets.symmetric(
                                     vertical: 5, horizontal: 80)
                             ),
@@ -146,10 +146,10 @@ class _SignUpPageState extends State<SignUpPage> {
                           await auth.createUserWithEmailAndPassword(
                               email: email, password: password);
                           ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
+                            const SnackBar(
                               backgroundColor: Colors.blueGrey,
                               content: Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: EdgeInsets.all(8.0),
                                 child: Text(
                                     'Sucessfully Registered.You Can Login Now'),
                               ),
