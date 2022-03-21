@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tour/crafts&shopping.dart';
 import 'package:tour/culture&entertainment.dart';
 import 'package:tour/main.dart';
 //import 'package:tour/servicereviews.dart';
@@ -123,7 +124,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>SignUpPage()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>CraftsShopping()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(
