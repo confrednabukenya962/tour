@@ -34,6 +34,7 @@ dependencies:
   date_range_picker: ^1.0.7
   flutter_rating_bar: ^4.0.0
   country_code_picker: ^2.0.2
+  url_launcher: ^6.0.20
 
 flutter_icons:
     android: "launcher_icon"
@@ -76,6 +77,7 @@ flutter:
      - images/tour.png
      - images/tourist.jpg
      - images/logo.png
+     - images/confred.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

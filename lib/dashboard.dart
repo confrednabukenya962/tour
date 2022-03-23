@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:tour/airporttransport.dart';
 import 'package:tour/crafts&shopping.dart';
 import 'package:tour/culture&entertainment.dart';
+import 'package:tour/lodging.dart';
 import 'package:tour/main.dart';
-//import 'package:tour/servicereviews.dart';
 import 'package:tour/servicereviews.dart';
 import 'package:tour/signin.dart';
-import 'package:tour/signup.dart';
+import 'package:tour/touroperator.dart';
 import 'package:tour/tourrecommender.dart';
-//import 'package:tour/tour_recommender.dart';
+
 
 class DashBoard extends StatefulWidget {
   const DashBoard({Key? key}) : super(key: key);
@@ -22,7 +23,8 @@ class _DashBoardState extends State<DashBoard> {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(35.0),
-        child: Container(child: GridView(children: [
+        child: Container(
+          child: GridView(children: [
           InkWell(
             onTap: (){
               Navigator.push(context,MaterialPageRoute(builder: (context)=>const SplashScreen()));
@@ -54,7 +56,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>const SignInPage()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const TourOperators()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(
@@ -68,7 +70,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>const SignUpPage()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const Lodging()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(
@@ -96,7 +98,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>const SignInPage()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const AirportTransport()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(

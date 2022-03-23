@@ -73,14 +73,21 @@ class _CultureState extends State<Culture> {
                       ),
                       ),
                       ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Text("Ndere Center",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),),
-                        ],
-                      ),
+
+                      //image
+                      child: Stack(
+                       // mainAxisAlignment: MainAxisAlignment.center,
+                        children:  [
+                          Image.asset("images/confred.jpg",height: 150,width:150,fit: BoxFit.cover,),
+                          //const SizedBox(height: 25,),
+                          Text("Ndere Center",style: TextStyle(fontWeight: FontWeight.bold,
+                              color: Colors.black,fontSize: 12,),
+                              textAlign: TextAlign.left),
+                      ],
+                             ),
+
                     ),
-                  ),
+                    ),
                   InkWell(
                     onTap: () {
                       Navigator.push(
