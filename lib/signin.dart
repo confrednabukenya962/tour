@@ -14,7 +14,7 @@ class SignInPage extends StatefulWidget {
 class _SignInPageState extends State<SignInPage> {
   final _formKey = GlobalKey<FormState>();
   final auth =FirebaseAuth.instance;
-
+  //bool isHidden = false;
   bool isloading = false;
   String email = '';
   String password = '';
@@ -74,7 +74,9 @@ class _SignInPageState extends State<SignInPage> {
                         onChanged: (value) {
                           password = value.trim();
                         },
-                        decoration:  const InputDecoration(labelText: 'Password'),
+                        decoration:  const InputDecoration(labelText: 'Password',
+                        //suffixIcon: IconButton(onPressed: onPressed, icon: icon)
+                        ),
                       ),
                       const SizedBox(height: 3),
                       Align(

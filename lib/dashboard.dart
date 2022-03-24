@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:tour/aboutuganda.dart';
+import 'package:tour/airlinesflights.dart';
 import 'package:tour/airporttransport.dart';
 import 'package:tour/crafts&shopping.dart';
 import 'package:tour/culture&entertainment.dart';
 import 'package:tour/lodging.dart';
-import 'package:tour/main.dart';
 import 'package:tour/servicereviews.dart';
-import 'package:tour/signin.dart';
+import 'package:tour/tourismattraction.dart';
 import 'package:tour/touroperator.dart';
 import 'package:tour/tourrecommender.dart';
 
@@ -27,7 +28,7 @@ class _DashBoardState extends State<DashBoard> {
           child: GridView(children: [
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>const SplashScreen()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const TourismAttractions()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(
@@ -84,7 +85,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>const PasswordReset()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const AirlinesFlights()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(
@@ -126,7 +127,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>CraftsShopping()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const CraftsShopping()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(
@@ -154,7 +155,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           InkWell(
             onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>const SplashScreen()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const AboutUganda()));
             },
             child: Container(decoration:BoxDecoration(borderRadius: BorderRadius.circular(5),color: Colors.white,),
               child: Column(
