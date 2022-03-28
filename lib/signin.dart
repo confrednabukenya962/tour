@@ -82,7 +82,7 @@ class _SignInPageState extends State<SignInPage> {
                       Align(
                         alignment: Alignment.center,
                         child: TextButton(onPressed: (){
-                          Navigator.push(context,MaterialPageRoute(builder: (context)=>PasswordReset()));
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>const PasswordReset()));
                         },child:  const Text("Forgot password?"),),
                       ),
                       Container(
@@ -112,7 +112,7 @@ class _SignInPageState extends State<SignInPage> {
           child: Text(
               'You have logged in successfully'),
         ),
-        duration: Duration(seconds: 3),
+        duration: Duration(seconds: 2),
       ),
     );
     Navigator.push(

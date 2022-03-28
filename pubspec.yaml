@@ -78,6 +78,33 @@ flutter:
      - images/tourist.jpg
      - images/logo.png
      - images/confred.jpg
+     - images/m1.jpg
+     - images/b7.jpg
+     - images/r1.jpg
+     - images/e4.jpg
+     - images/f6.jpg
+     - images/n1.jpeg
+     - images/s4.jpg
+     - images/l8.png
+     - images/l3.jpg
+     - images/q11.jpg
+     - images/k8.jpg
+     - images/k10.jpg
+     - images/s7.jpg
+     - images/n7.jpg
+     - images/c2.jpg
+     - images/w1.jpg
+     - images/z3a.jpg
+     - images/v5.jpg
+     - images/y2.jpg
+     - images/sp1.jpg
+     - images/ny4.jpg
+
+
+
+
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
