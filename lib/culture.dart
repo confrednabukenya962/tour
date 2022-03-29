@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tour/signin.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 class Culture extends StatefulWidget {
   const Culture({Key? key}) : super(key: key);
 
@@ -52,208 +53,171 @@ class _CultureState extends State<Culture> {
               ),
             ],
           ),
-          SizedBox(height: 3,),
+          const SizedBox(height: 3,),
           Expanded(
             child:  Container(
               padding:const EdgeInsets.fromLTRB(20.0,15.0,20.0,15.0),
-              child: Container(
+
                 child: GridView(children: [
                   InkWell(
-                    onTap: (){
-                      Navigator.push(
-                          context, MaterialPageRoute(
-                          builder: (context) => const PasswordReset())
-                      );
-                    },
+                    onTap: ()=> launch('https://ndere.com/'),
 
-                    child: Container(
-                      decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                        color: Colors.lightBlue,
-                        width: 2,
-                      ),
-                      ),
-                      ),
-
-                      //image
-                      child: Stack(
-                       // mainAxisAlignment: MainAxisAlignment.center,
-                        children:  [
-                          Image.asset("images/confred.jpg",height: 150,width:150,fit: BoxFit.cover,),
-                          //const SizedBox(height: 25,),
-                          Text("Ndere Center",style: TextStyle(fontWeight: FontWeight.bold,
-                              color: Colors.black,fontSize: 12,),
-                              textAlign: TextAlign.left),
+                    child: Stack(
+                      children:  [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child:Image.asset("images/nd1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Ndere Center",style: TextStyle(fontWeight: FontWeight.bold,
+                                color: Colors.white,fontSize: 12,),
+                              textAlign: TextAlign.center,),
+                          ),
                       ],
                              ),
 
                     ),
-                    ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context, MaterialPageRoute(
-                          builder: (context) => const PasswordReset())
-                      );
-                    },
-                    child: Container(
-                      decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                        color: Colors.lightBlue,
-                        width: 2,
-                      ),
-                      ),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
 
-                          Text("Cultural Center", style: TextStyle(fontWeight: FontWeight.bold,
-                              color: Colors.black, fontSize: 12),)
-                        ],
-                      ),
-                    ),
-                  ),
                   InkWell(
-                    onTap: (){
-                      Navigator.push(
-                          context, MaterialPageRoute(
-                          builder: (context) => const PasswordReset())
-                      );
-                    },
-                    child: Container(
-                      decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                        color: Colors.lightBlue,
-                        width: 2,
-                      ),
-                      ),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Text("Uganda Museum",
-                            style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
-                        ],
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: (){
-                      Navigator.push(
-                          context, MaterialPageRoute(
-                          builder: (context) => const PasswordReset())
-                      );
-                    },
-                    child: Container(
-                      decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                        color: Colors.lightBlue,
-                        width: 2,
-                      ),
-                      ),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Text("Kabaka's Palace",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
-                        ],
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: (){
-                      Navigator.push(
-                          context, MaterialPageRoute(
-                          builder: (context) => const PasswordReset())
-                      );
-                    },
-                    child: Container(
-                      decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                        color: Colors.lightBlue,
-                        width: 2,
-                      ),
-                      ),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Text("Kasubi Tombs",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
-                        ],
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: (){
-                      Navigator.push(
-                          context, MaterialPageRoute(
-                          builder: (context) => const PasswordReset())
-                      );
-                    },
-                    child: Container(
-                      decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                        color: Colors.lightBlue,
-                        width: 2,
-                      ),
-                      ),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Text("Fort Lugard",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
-                        ],
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: (){
-                      Navigator.push(
-                          context, MaterialPageRoute(
-                          builder: (context) => const PasswordReset())
-                      );
-                    },
-                    child: Container(
-                      decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                        color: Colors.lightBlue,
-                        width: 2,
-                      ),
-                      ),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
+                    onTap: () => launch('https://www.uncc.co.ug/'),
+                    child: Stack(
+                        //mainAxisAlignment: MainAxisAlignment.center,
+                        children:[
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child:Image.asset("images/cul1.png",height: 250,width:250,fit: BoxFit.cover,),
+                          ),
 
-                          Text("Namugongo Shrines",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
+                           const Padding(
+                             padding: EdgeInsets.all(8.0),
+                             child: Text("Cultural Center", style: TextStyle(fontWeight: FontWeight.bold,
+                                color: Colors.white, fontSize: 12),
+                              textAlign: TextAlign.center,),
+                           ),
                         ],
                       ),
                     ),
-                  ),
+
                   InkWell(
-                    onTap: (){
-                      Navigator.push(
-                          context, MaterialPageRoute(
-                          builder: (context) => const PasswordReset())
-                      );
-                    },
-                    child: Container(
-                      decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                        color: Colors.lightBlue,
-                        width: 2,
-                      ),
-                      ),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Text("Naggalabi-Buddo site",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
+                    onTap: () => launch('https://www.ugandamuseums.or.ug/'),
+                    child: Stack(
+                        //mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child:Image.asset("images/mu1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                          ),
+                           const Padding(
+                             padding: EdgeInsets.all(8.0),
+                             child: Text("Uganda Museum",
+                              style: TextStyle(fontWeight: FontWeight.bold,
+                                  color: Colors.white,fontSize: 12),
+                              textAlign: TextAlign.center,),
+                           ),
                         ],
                       ),
                     ),
-                  ),
+
+                  InkWell(
+                    onTap: () => launch('https://www.ugandabudgetsafaris.com/blog/kabakas-palace/'),
+                    child: Stack(
+                       // mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child:Image.asset("images/ka1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Kabaka's Palace",style: TextStyle(fontWeight: FontWeight.bold,
+                                color: Colors.white,fontSize: 12),
+                              textAlign: TextAlign.center,),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                  InkWell(
+                    onTap: () => launch('https://whc.unesco.org/en/list/1022/'),
+                    child: Stack(
+                       // mainAxisAlignment: MainAxisAlignment.center,
+                        children:[
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child:Image.asset("images/to1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Kasubi Tombs",style: TextStyle(fontWeight: FontWeight.bold,
+                                color: Colors.white,fontSize: 12),
+                              textAlign: TextAlign.center, ),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                  InkWell(
+                    onTap: ()=> launch('https://ugandatourismcenter.com/place/fort-lugard-museum/'),
+                    child: Stack(
+                       // mainAxisAlignment: MainAxisAlignment.center,
+                        children:[
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child:Image.asset("images/fort1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Fort Lugard",style: TextStyle(fontWeight: FontWeight.bold,
+                                color: Colors.white,fontSize: 12),
+                              textAlign: TextAlign.center, ),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                  InkWell(
+                    onTap: ()=> launch('https://www.ugandamartyrsshrine.org.ug/'),
+                    child: Stack(
+                       // mainAxisAlignment: MainAxisAlignment.center,
+                        children:[
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child:Image.asset("images/shr1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Namugongo Shrines",style: TextStyle(fontWeight: FontWeight.bold,
+                                color: Colors.white,fontSize: 12),
+                              textAlign: TextAlign.center,),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                  InkWell(
+                    onTap: ()=> launch('https://www.ugandasafaristours.com/blog/naggalabi-buddo-bugandas-coronation-site.html'),
+                    child: Stack(
+                        //mainAxisAlignment: MainAxisAlignment.center,
+                        children:[
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child:Image.asset("images/naga1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Naggalabi-Buddo site",style: TextStyle(fontWeight: FontWeight.bold,
+                                color: Colors.white,fontSize: 12),
+                              textAlign: TextAlign.center,),
+                          ),
+                        ],
+                      ),
+                    ),
                 ],
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisSpacing: 10,crossAxisSpacing: 10),
                 ),
               ),
             ),
-          ),
-
-
         ],
       ),
 
