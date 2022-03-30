@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tour/signin.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 class NightLife extends StatefulWidget {
   const NightLife({Key? key}) : super(key: key);
 
@@ -52,221 +53,182 @@ class _NightLifeState extends State<NightLife> {
     ),
     ],
     ),
-    SizedBox(height: 3,),
+    const SizedBox(height: 3,),
         Expanded(
         child:  Container(
           padding:const EdgeInsets.fromLTRB(20.0,15.0,20.0,15.0),
-          child: Container(
-            child: GridView(children: [
+          child: GridView(children: [
               InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
+                onTap: ()=> launch('https://www.spekehotel.com/rock-garden-cafe/'),
+              child: Stack(
+                   // mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/rock1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Rock Garden",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white,fontSize: 12),),
+                      ),
+                    ],
+                  ),
+                ),
 
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text("Rock Garden",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),),
+              InkWell(
+                onTap: () => launch('https://ugandatourismcenter.com/place/club-ambiance-kampala/'),
+                child: Stack(
+                   // mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/club1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Club Ambiance", style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),),
+                      )
                     ],
                   ),
                 ),
-              ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
 
-                      Text("Club Ambiance", style: TextStyle(fontWeight: FontWeight.bold,
-                          color: Colors.black, fontSize: 12),)
+              InkWell(
+                onTap: ()=> launch('https://www.angenoir.net/'),
+                child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/guv1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Club Guvnor",
+                          style: TextStyle(fontWeight: FontWeight.bold,
+                              color: Colors.white,fontSize: 12),),
+                      )
                     ],
                   ),
                 ),
-              ),
-              InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text("Club Guvnor",
-                        style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
-                    ],
-                  ),
-                ),
-              ),
-              InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text("Hunter's Pub",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
-                    ],
-                  ),
-                ),
-              ),
-              InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text("Al's Bar",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
-                    ],
-                  ),
-                ),
-              ),
-              InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text("Rhino Bar",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
-                    ],
-                  ),
-                ),
-              ),
-              InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
 
-                      Text("club silk",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
-                    ],
-                  ),
-                ),
-              ),
               InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text("Capital Pub",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
+                onTap: ()=> launch('https://www.hunterspub.net/'),
+                child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/hunt1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Hunter's Pub",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white,fontSize: 12),),
+                      )
                     ],
                   ),
                 ),
-              ),
+
               InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text("Kampala Comedy Night",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
+                onTap: ()=> launch('https://www.yellow.ug/company/6405/als-bar'),
+                child: Stack(
+                   // mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                      borderRadius: BorderRadius.circular(15.0),
+                      child:Image.asset("images/aib1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                    ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Al's Bar",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white,fontSize: 12),),
+                      )
                     ],
                   ),
                 ),
-              ),
+
+              InkWell(
+                onTap: ()=> launch('https://www.yellow.ug/company/6443/rhino-bar'),
+                child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/rh2.png",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Rhino Bar",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white,fontSize: 12),),
+                      )
+                    ],
+                  ),
+                ),
+
+              InkWell(
+                onTap: ()=> launch('https://www.yellow.ug/company/32668/club-silk'),
+                child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/sil1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("club silk",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white,fontSize: 12),),
+                      )
+                    ],
+                  ),
+                ),
+
+              InkWell(
+                onTap: ()=> launch('https://www.capitalpub.com/'),
+                child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/pub1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Capital Pub",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white,fontSize: 12),),
+                      )
+                    ],
+                  ),
+                ),
+
+              InkWell(
+                onTap: ()=> launch('https://adauganda.com/listings/comedy-store-ug/'),
+                child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/come3.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Kampala Comedy Night",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white,fontSize: 12),),
+                      )
+                    ],
+                  ),
+                ),
             ],
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisSpacing: 10,crossAxisSpacing: 10),
             ),
           ),
         ),
-      ),
+
     ],
     ),
     );

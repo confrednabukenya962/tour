@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tour/signin.dart';
+
+import 'package:url_launcher/url_launcher.dart';
 
 class Places extends StatefulWidget {
   const Places({Key? key}) : super(key: key);
@@ -53,199 +54,162 @@ class _PlacesState extends State<Places> {
     ),
     ],
     ),
-    SizedBox(height: 3,),
+    const SizedBox(height: 3,),
         Expanded(
         child:  Container(
           padding:const EdgeInsets.fromLTRB(20.0,15.0,20.0,15.0),
-          child: Container(
             child: GridView(children: [
               InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
+                onTap: ()=> launch('https://bahai-how-africa.org/'),
+                child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/bah2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Bahai Temple",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black,fontSize: 12),
+                          textAlign: TextAlign.center,),
+                      ),
+                    ],
+                  ),
+                ),
+              InkWell(
+                onTap: () => launch('https://www.gaddafinationalmosque.com/'),
+                child: Stack(
+                   // mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/o1.png",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Old Kampala Mosque", style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                          textAlign: TextAlign.center,),
+                      ),
+                    ],
+                  ),
+                ),
+              InkWell(
+                onTap: ()=> launch('https://klarchdiocese.org.ug/about-us/lubaga-cathedral/'),
+                child: Stack(
+                   // mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/cath3.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Lubaga Cathedral",
+                          style: TextStyle(fontWeight: FontWeight.bold,
+                              color: Colors.black,fontSize: 12),),
+                      )
+                    ],
+                  ),
+                ),
 
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text("Bahai Temple",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),),
+              InkWell(
+                onTap: ()=> launch('https://churchofuganda.org/dioceses/namirembe/'),
+                child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/nami2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Namirembe Cathedral",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black,fontSize: 12),),
+                      )
                     ],
                   ),
                 ),
-              ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
 
-                      Text("Kalerwe", style: TextStyle(fontWeight: FontWeight.bold,
-                          color: Colors.black, fontSize: 12),)
+              InkWell(
+                onTap: ()=> launch('https://nakaseromarket.ug/'),
+                child:Stack(
+                   // mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/71.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Nakaseero Market",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black,fontSize: 12),),
+                      )
                     ],
                   ),
                 ),
-              ),
-              InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text("lubaga cathedral",
-                        style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
-                    ],
-                  ),
-                ),
-              ),
-              InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text("Makerere University",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
-                    ],
-                  ),
-                ),
-              ),
-              InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text("Nakaseero Market",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
-                    ],
-                  ),
-                ),
-              ),
-              InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text("namirembe cathedral",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
-                    ],
-                  ),
-                ),
-              ),
-              InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
 
-                      Text("Old Kampala Mosque",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
-                    ],
-                  ),
-                ),
-              ),
               InkWell(
-                onTap: (){
-                  Navigator.push(
-                      context, MaterialPageRoute(
-                      builder: (context) => const PasswordReset())
-                  );
-                },
-                child: Container(
-                  decoration:const BoxDecoration(  color:Color(0xffbdbdbd),border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
-                  ),
-                  ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text("Owino Market",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 12),)
+                onTap: ()=> launch('https://www.mak.ac.ug/'),
+                child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/muk3.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Makerere University",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black,fontSize: 12),),
+                      )
                     ],
                   ),
                 ),
-              ),
+
+              InkWell(
+                onTap: ()=> launch('http://www.agromarketday.com/markets/6-kalerwe-market'),
+                child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/kal4.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Kalerwe Market",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black,fontSize: 12),),
+                      )
+                    ],
+                  ),
+                ),
+
+              InkWell(
+                onTap: () => launch('https://wego.here.com/uganda/kampala/mall/owino-market--800s8p1v-e3c851dd06f4445785e286a81771356e?x=ep&map=0.30995,32.57502,15,normal'),
+                child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/ow1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Owino Market",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black,fontSize: 12),),
+                      )
+                    ],
+                  ),
+                ),
+
             ],
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisSpacing: 10,crossAxisSpacing: 10),
             ),
           ),
         ),
-      ),
     ],
     ),
     );
