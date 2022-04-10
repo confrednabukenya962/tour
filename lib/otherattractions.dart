@@ -17,7 +17,7 @@ class _OtherAttractionsState extends State<OtherAttractions> {
           child: GridView(children: [
               InkWell(
               onTap: () => launch('https://www.ugandabudgetsafaris.com/blog/source-of-the-nile/'
-                 ),
+                 ), // link to Source of Nile River
                 child: Stack(
                   children:  [
                 ClipRRect(
@@ -36,7 +36,7 @@ class _OtherAttractionsState extends State<OtherAttractions> {
                   ),
                InkWell(
               onTap: ()=> launch('https://www.brilliant-uganda.com/lake-victoria'
-              ),
+              ), // link to Lake Victoria
                  child: Stack(
                    children:  [
                  ClipRRect(
@@ -54,7 +54,7 @@ class _OtherAttractionsState extends State<OtherAttractions> {
              ),
                 InkWell(
                 onTap: ()=> launch('https://www.africanpearlsafaris.com/top-11-tourism-places-to-visit-on-a-kampala-city-tour/'
-                 ),
+                 ), // link to Kampala Capital City
                   child: Stack(
                     children: [
                     ClipRRect(
@@ -75,7 +75,7 @@ class _OtherAttractionsState extends State<OtherAttractions> {
 
             InkWell(
               onTap: ()=> launch('https://uwec.ug/'
-              ),
+              ), // link to Entebbe Wildlife Conservation
               child: Stack(
                 children: [
                   ClipRRect(
@@ -95,7 +95,7 @@ class _OtherAttractionsState extends State<OtherAttractions> {
             ),
             InkWell(
               onTap: ()=> launch('https://lakebunyonyiuganda.com/'
-              ),
+              ), // link to Lake Bunyonyi
               child: Stack(
                 children: [
                   ClipRRect(
@@ -115,7 +115,7 @@ class _OtherAttractionsState extends State<OtherAttractions> {
             ),
             InkWell(
               onTap: ()=> launch('https://ziwarhinosanctuary.com/'
-              ),
+              ), // link to Ziwa Rhino Sanctuary
               child: Stack(
                 children: [
                   ClipRRect(
@@ -135,7 +135,7 @@ class _OtherAttractionsState extends State<OtherAttractions> {
             ),
             InkWell(
               onTap: ()=> launch('https://www.sipifalls.com/'
-              ),
+              ), // link to Sipi Falls
               child: Stack(
                 children: [
                   ClipRRect(
@@ -155,7 +155,7 @@ class _OtherAttractionsState extends State<OtherAttractions> {
             ),
             InkWell(
               onTap: ()=> launch('https://africanrockart.britishmuseum.org/country/uganda/nyero/'
-              ),
+              ), // link to Nyero Rock Paintings
               child: Stack(
                 children: [
                   ClipRRect(

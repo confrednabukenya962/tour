@@ -27,8 +27,7 @@ class _AboutUgandaState extends State<AboutUganda> {
 
       body: Padding(
         padding:const EdgeInsets.fromLTRB(20.0,15.0,20.0,15.0),
-        child: Container(
-          child: GridView(children: [
+        child: GridView(children: [
             InkWell(
               onTap: (){
                 //Navigator.push(context,MaterialPageRoute(builder: (context)=>const SplashScreen()));
@@ -299,8 +298,6 @@ class _AboutUgandaState extends State<AboutUganda> {
           ),
         ),
       ),
-
-    ),
     );
   }
 }

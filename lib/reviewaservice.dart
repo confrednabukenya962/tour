@@ -31,8 +31,8 @@ class _ReviewServiceState extends State<ReviewService> {
 
   @override
   Widget build(BuildContext context) {
-    final start =dateRange.start;
-    final end =dateRange.end;
+    final start =dateRange.start;// default start date
+    final end =dateRange.end;// end date
     return MaterialApp(
       supportedLocales: const [
         Locale('en','US'),
@@ -40,7 +40,7 @@ class _ReviewServiceState extends State<ReviewService> {
       localizationsDelegates: const [
         CountryLocalizations.delegate
       ],
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,// removes debug thing on the page
       theme: ThemeData(
         backgroundColor: Colors.white,
         //primarySwatch: Colors.blue,
@@ -50,7 +50,7 @@ class _ReviewServiceState extends State<ReviewService> {
       appBar: AppBar(
       backgroundColor: Colors.white,
       title: const Text("Review a service",
-        style: TextStyle(color: Colors.black,
+        style: TextStyle(color: Colors.black,// title label
         ),
       ),
     ),
@@ -77,17 +77,16 @@ class _ReviewServiceState extends State<ReviewService> {
           const SizedBox(height: 10,),
           Center(
              child: Column(
-               crossAxisAlignment: CrossAxisAlignment.center,
-               mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,//Positions children at the middle of the cross axis.
+                    mainAxisAlignment: MainAxisAlignment.center,// Positions children at the middle of the main axis.
                children: <Widget>[
                  DropdownButton(
                    underline: Container(
                    ),
-                   hint: const Center(
-                       child: Text(
+                   hint:const Text(
                          'Select service type',
                          style: TextStyle(color: Colors.white),
-                       )),
+                       ),
                    value: dropdownValue,
                        items:items.map((String items) {
                          return DropdownMenuItem(

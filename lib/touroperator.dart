@@ -31,9 +31,6 @@ class _TourOperatorsState extends State<TourOperators> {
     ),
 
       body: Column(
-        //mainAxisAlignment: MainAxisAlignment.start,
-        //crossAxisAlignment: CrossAxisAlignment.start,
-
         children: [
           const SizedBox(height: 5,),
           Expanded(
@@ -105,21 +102,18 @@ class _TourOperatorsState extends State<TourOperators> {
                       children:  [
                         const Text('Based on your item selection, we recommend',
                           style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 15),),
-                        //const SizedBox(height: 3,),
                         Link(uri: Uri.parse("https://www.matoketours.com/"),
                             target: LinkTarget.blank,
                             builder: (context,followLink){
                               return TextButton(onPressed: followLink,
                                   child: const Text('1. Matoke Tours. Visit website http://....',style: TextStyle(color: Colors.green,fontSize: 12),));
                             }),
-                        // const SizedBox(height: 3,),
                         Link(uri: Uri.parse("https://ropanitours.com/"),
                             target: LinkTarget.blank,
                             builder: (context,followLink){
                               return TextButton(onPressed: followLink,
                                   child: const Text('2. Ropani Tours. Visit website http://....',style: TextStyle(color: Colors.green,fontSize: 12),));
                             }),
-                        //const SizedBox(height: 3,),
                         Link(uri: Uri.parse("https://girafferanch.com/"),
                             target: LinkTarget.blank,
                             builder: (context,followLink){

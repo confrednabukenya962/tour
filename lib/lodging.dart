@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/link.dart';
-//import 'package:url_launcher/url_launcher.dart';
+
 
 class Lodging extends StatefulWidget {
   const Lodging({Key? key}) : super(key: key);
@@ -13,8 +13,8 @@ class _LodgingState extends State<Lodging> {
 
   String _selectedValue = 'Luxury';
   final items =['Kampala','Jinja','Entebbe', 'Fort Portal','Mbarara',
-    'Mbale','Gulu','Moronto','Arua'];
-  String? value;
+    'Mbale','Gulu','Moronto','Arua'];//items in a dropdown button
+  String? lodge;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -54,12 +54,12 @@ class _LodgingState extends State<Lodging> {
                 style: TextStyle(color: Colors.white70,
                     fontSize: 13),
               )),
-          value: value,
+          value: lodge,
           iconSize: 30,
           icon: const Icon(Icons.arrow_drop_down,color: Colors.black,),
           items:items.map(buildMenuItem).toList(),
           onChanged: (value)=> setState(() =>
-          this.value=value,
+          lodge=value,
           ),
           //style: TextStyle(color: Colors.white),
         ),
@@ -78,7 +78,8 @@ class _LodgingState extends State<Lodging> {
              crossAxisAlignment: CrossAxisAlignment.start,
              children: [
                const Text('Select preferred accomodation experience',
-             style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 15),),
+             style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,
+                 fontSize: 15),),
                ListTile(
                  dense:true,
                  leading: Radio<String>(

@@ -14,7 +14,6 @@ class SignInPage extends StatefulWidget {
 class _SignInPageState extends State<SignInPage> {
   final _formKey = GlobalKey<FormState>();
   final auth =FirebaseAuth.instance;
-  //bool isHidden = false;
   bool isloading = false;
   String email = '';
   String password = '';
@@ -47,8 +46,7 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                 ],
               ),
-              Container(
-                child: Form(
+               Form(
                   key:_formKey,
                   child: Column(
                     children:<Widget>[
@@ -66,16 +64,17 @@ class _SignInPageState extends State<SignInPage> {
                       TextFormField(
                         //controller: passwordController,
                         obscureText: true,
-                        validator: (value) {
+                        validator: (value){
                           if(value!.isEmpty){
-                            return "Please enter Password";
-                          }
+                            return "Please enter your email";
+                          }else{
+                            email=value;
+                          }return null;
                         },
                         onChanged: (value) {
                           password = value.trim();
                         },
                         decoration:  const InputDecoration(labelText: 'Password',
-                        //suffixIcon: IconButton(onPressed: onPressed, icon: icon)
                         ),
                       ),
                       const SizedBox(height: 3),
@@ -136,7 +135,7 @@ class _SignInPageState extends State<SignInPage> {
     ],
     ),
     );
-    print(e);
+   // print(e);
     }
     setState(() {
     isloading = false;
@@ -160,9 +159,6 @@ class _SignInPageState extends State<SignInPage> {
                     ],
                   ),
                 ),
-
-              ),
-
             ],
           ),
         ),
@@ -234,22 +230,18 @@ class _PasswordResetState extends State<PasswordReset> {
                         ),
                         onPressed: (){
                           if(_formKey.currentState!.validate()) {
-                            FirebaseAuth.instance.sendPasswordResetEmail(email: email).then((value) =>Navigator.push(context,MaterialPageRoute(builder: (context)=>SignInPage())));
+                            FirebaseAuth.instance.sendPasswordResetEmail(email: email).then((value) =>Navigator.push(context,MaterialPageRoute(builder: (context)=>const SignInPage())));
                           }
                         },
                         //
                         child:  const Text("Submit")),
                   ),
-                   //const Padding(
-                       //padding: EdgeInsets.all(12),
                   const Text("A one time password will be sent to your email account. Use it to sign in ",
                     style: TextStyle(
                         //color: Colors.black,
                         //fontSize: 15
                     ),
                   ),
-           // ),
-
                   Center(
                     child: ElevatedButton(
                         style: TextButton.styleFrom(
@@ -257,7 +249,7 @@ class _PasswordResetState extends State<PasswordReset> {
                             padding:  const EdgeInsets.symmetric(vertical: 5,horizontal: 70)
                         ),
                         onPressed: (){
-                          Navigator.push(context,MaterialPageRoute(builder: (context)=>SignInPage()));
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>const SignInPage()));
                         }, child:  const Text("Return to Login")),
                   ),
                   //<Widget>

@@ -24,7 +24,7 @@ class _DashBoardState extends State<DashBoard> {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(35.0),
-        child: Container(
+
           child: GridView(children: [
           InkWell(
             onTap: (){
@@ -171,8 +171,6 @@ class _DashBoardState extends State<DashBoard> {
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisSpacing: 10,crossAxisSpacing: 10),
         ),
         ),
-      ),
-
     );
   }
 }

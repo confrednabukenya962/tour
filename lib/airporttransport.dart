@@ -12,8 +12,6 @@ class _AirportTransportState extends State<AirportTransport> {
 
   String _selectedValue = 'Public';
 
-  String? value;
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

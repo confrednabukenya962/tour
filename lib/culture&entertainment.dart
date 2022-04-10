@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tour/culture.dart';
 import 'package:tour/night.dart';
 import 'package:tour/places.dart';
-//import 'package:tour/signin.dart';
+
 
 class CultureEntertainment extends StatefulWidget {
   const CultureEntertainment({Key? key}) : super(key: key);
@@ -12,9 +12,6 @@ class CultureEntertainment extends StatefulWidget {
 }
 
 class _CultureEntertainmentState extends State<CultureEntertainment> {
- final items =['Kampala','Jinja','Entebbe', 'Fort Portal','Mbarara',
-   'Mbale','Gulu','Moronto','Arua'];
- String? value;
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +41,7 @@ class _CultureEntertainmentState extends State<CultureEntertainment> {
           ),
     ),
 
-    body:TabBarView(
+    body:const TabBarView(
       children: [
         Culture(),
         Places(),

@@ -5,7 +5,7 @@ import 'package:tour/signup.dart';
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -18,15 +18,6 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
       home: const SplashScreen(),
@@ -50,24 +41,21 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   loadPage() async {
-    await Future.delayed(const Duration(seconds: 5));
-
+    await Future.delayed(const Duration(seconds: 5));// makes the page delays for 5s before it takes to the next page
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => SignUpPage()));
-    //ModalRoute.withName("/MyHomePage"));
+        context, MaterialPageRoute(builder: (context) => const SignUpPage())); //Takes to the SignUpPage
   }
 
   @override
   Widget build(BuildContext context) {
-    //final user = FirebaseAuth.instance.currentUser!;
     return Container(
-      decoration: BoxDecoration(color: Colors.greenAccent),
+      decoration: const BoxDecoration(color: Colors.greenAccent),
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Center(
             child: Image.asset("images/logo.png")
         ),
-
+        // centers the logo image
       ),
     );
   }

@@ -17,10 +17,9 @@ class _GameParksState extends State<GameParks> {
         child: GridView(children: [
           InkWell(
             onTap: () => launch('https://www.queenelizabethparkuganda.com/'
-            ),
+            ),// link to queen Elizabeth
 
             child: Stack(
-              //mainAxisAlignment: MainAxisAlignment.center,
               children:  [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15.0),
@@ -39,10 +38,9 @@ class _GameParksState extends State<GameParks> {
           ),
           InkWell(
             onTap: ()=> launch('https://www.murchisonfallsnationalpark.com/'
-            ),
+            ),// link to Murchison Falls
 
             child: Stack(
-              // mainAxisAlignment: MainAxisAlignment.center,
               children:  [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15.0),
@@ -58,10 +56,9 @@ class _GameParksState extends State<GameParks> {
           ),
           InkWell(
             onTap: ()=> launch('https://www.bwindiforestnationalpark.com/'
-            ),
+            ), // link to Bwindi Forest NP
 
             child: Stack(
-              // mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15.0),
@@ -77,10 +74,9 @@ class _GameParksState extends State<GameParks> {
           ),
           InkWell(
             onTap: ()=> launch('https://www.kideponationalpark.com/'
-            ),
+            ),// link to Kidepo Valley NP
 
             child: Stack(
-              //mainAxisAlignment: MainAxisAlignment.center,
               children:[
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15.0),
@@ -98,9 +94,8 @@ class _GameParksState extends State<GameParks> {
 
           InkWell(
             onTap: ()=> launch('https://www.rwenzorimountainsnationalpark.com/'
-            ),
+            ),// link to Rwenzori Mountains NP
             child: Stack(
-              //mainAxisAlignment: MainAxisAlignment.center,
               children:[
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15.0),
@@ -118,9 +113,8 @@ class _GameParksState extends State<GameParks> {
 
           InkWell(
             onTap: ()=> launch('https://www.mountelgon.net/'
-            ),
+            ), // link to Mountain Elgon NP
             child: Stack(
-              //mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15.0),
@@ -138,10 +132,9 @@ class _GameParksState extends State<GameParks> {
 
           InkWell(
             onTap: ()=> launch('https://www.kibaleforestnationalpark.com/'
-            ),
+            ), // link to Kibale Forest NP
 
             child: Stack(
-              //mainAxisAlignment: MainAxisAlignment.center,
               children:[
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15.0),
@@ -158,9 +151,8 @@ class _GameParksState extends State<GameParks> {
 
           InkWell(
             onTap: ()=> launch('https://www.mgahinganationalpark.org/'
-            ),
+            ), // link to Mgahinga Gorilla NP
             child: Stack(
-              //mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15.0),
@@ -177,10 +169,9 @@ class _GameParksState extends State<GameParks> {
 
           InkWell(
             onTap: ()=> launch('https://ugandawildlife.org/tours/semuliki/'
-            ),
+            ), // link to Semuliki NP
 
             child: Stack(
-              // mainAxisAlignment: MainAxisAlignment.center,
               children:[
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15.0),
@@ -196,9 +187,8 @@ class _GameParksState extends State<GameParks> {
           ),
           InkWell(
             onTap: ()=> launch('https://www.lakemburoparkuganda.com/'
-            ),
+            ),// link to Lake Mburo NP
             child: Stack(
-              //mainAxisAlignment: MainAxisAlignment.center,
               children:[
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15.0),

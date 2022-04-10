@@ -37,7 +37,7 @@ class _SignUpPageState extends State<SignUpPage> {
           child: Column(
             children: <Widget>[
               Image.asset("images/tour.png", height: 80,),
-              SizedBox(height: 25,),
+              const SizedBox(height: 25,),
               Column(
                 children: const [
                   Text(
@@ -53,8 +53,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                 ],
               ),
-              Container(
-                child: Form(
+            Form(
                   key: _formKey,
                   child: Column(
                     children: <Widget>[
@@ -73,8 +72,10 @@ class _SignUpPageState extends State<SignUpPage> {
                         obscureText: true,
                         validator: (value) {
                           if (value!.isEmpty) {
-                            return "Please enter Password";
-                          }
+                            return "Please enter your email";
+                          }else{
+                            email=value;
+                          }return null;
                         },
                         onChanged: (value) {
                           password = value.trim();
@@ -159,7 +160,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           //Navigator.of(context).pop();
                           Navigator.push(
                               context, MaterialPageRoute(
-                              builder: (context) => SignInPage())
+                              builder: (context) => const SignInPage())
                           );
                           setState(() {
                             isloading = false;
@@ -170,14 +171,14 @@ class _SignUpPageState extends State<SignUpPage> {
                             builder: (ctx) =>
                                 AlertDialog(
                                   title:
-                                  Text(' Ops! Registration Failed'),
+                                  const Text(' Ops! Registration Failed'),
                                   content: Text('${e.message}'),
                                   actions: [
                                     TextButton(
                                       onPressed: () {
                                         Navigator.of(ctx).pop();
                                       },
-                                      child: Text('Okay'),
+                                      child: const Text('Okay'),
                                     )
                                   ],
                                 ),
@@ -196,7 +197,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           const Text("Already have an account?"),
                           TextButton(onPressed: () {
                             Navigator.push(context, MaterialPageRoute(
-                                builder: (context) => SignInPage()));
+                                builder: (context) => const SignInPage()));
                           }, child: const Text("Sign in"))
                         ],
                       )
@@ -206,7 +207,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
 
               )
-        ),
+
 
         ],),
 

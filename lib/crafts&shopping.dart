@@ -11,7 +11,7 @@ class CraftsShopping extends StatefulWidget {
 class _CraftsShoppingState extends State<CraftsShopping> {
   final items =['Kampala','Jinja','Entebbe', 'Fort Portal','Mbarara',
     'Mbale','Gulu','Moronto','Arua'];
-  String? value;
+  String? shopping;
 
   @override
   Widget build(BuildContext context) {
@@ -52,12 +52,12 @@ class _CraftsShoppingState extends State<CraftsShopping> {
                   style: TextStyle(color: Colors.white70,
                       fontSize: 13),
                 )),
-            value: value,
+            value: shopping,
             iconSize: 30,
             icon: const Icon(Icons.arrow_drop_down,color: Colors.black,),
             items:items.map(buildMenuItem).toList(),
             onChanged: (value)=> setState(() =>
-            this.value=value,
+            shopping=value,
             ),
             //style: TextStyle(color: Colors.white),
           ),
