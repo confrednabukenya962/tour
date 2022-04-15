@@ -176,7 +176,7 @@ class _PlacesState extends State<Places> {
           ),
         );
 
-      case 'Jinja':
+      case 'Gulu':
         return   Expanded(
           child: Container(
             padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -185,19 +185,19 @@ class _PlacesState extends State<Places> {
                 //Visibility(visible: selectedCity == 'Kampala',
                 // each  inkwell contains the link, image and label to that container
                 InkWell(
-                  onTap: ()=> launch('https://ndere.com/'),// link to ndere website
+                  onTap: ()=> launch('https://ugandatourismcenter.com/place/fort-patiko-samuel-bakers-fort/'),// link to ndere website
                   // stack allows us to put something of top of the other
                   child: Stack(
                     children:  [
                       //clipRReact gives an image a shape of your choice
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child:Image.asset("images/nd1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                        child:Image.asset("images/for1.jpg",height: 250,width:250,fit: BoxFit.cover,),
                       ),
                       const Padding(
                         padding: EdgeInsets.all(8.0),//adds spacing around the label ndere center
-                        child: Text("Ndere Center",style: TextStyle(fontWeight: FontWeight.bold,
-                            color: Colors.white, fontSize: 12),
+                        child: Text("Fort Patiko",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
                         ),
                         //label to the image
                       ),
@@ -205,19 +205,19 @@ class _PlacesState extends State<Places> {
                   ),
                 ),
                 InkWell(
-                  onTap: ()=> launch('https://www.uncc.co.ug/'),//link to Cultural Center
+                  onTap: ()=> launch('https://petnahafricatours.com/amuru-hot-springs/'),//link to Cultural Center
 
                   child: Stack(
                     //mainAxisAlignment: MainAxisAlignment.center,
                     children:  [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child:Image.asset("images/cul1.png",height: 250,width:250,fit: BoxFit.cover,),
+                        child:Image.asset("images/amu1.jpg",height: 250,width:250,fit: BoxFit.cover,),
                       ),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text("Cultural Center",style: TextStyle(fontWeight: FontWeight.bold,
-                            color: Colors.white, fontSize: 12),
+                        child: Text("Amuru Hotspring",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
                         ),
                         //label to the image
                       ),
@@ -226,19 +226,19 @@ class _PlacesState extends State<Places> {
                 ),
                 //Visibility(visible: selectedCity == 'Kampala',
                 InkWell(
-                  onTap: ()=> launch('https://www.ugandamuseums.or.ug/'),// link to Uganda Museum
+                  onTap: ()=> launch('https://www.gorillatripsuganda.com/guruguru-caves.html'),// link to Uganda Museum
 
                   child: Stack(
                     children:  [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child:Image.asset("images/mu1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                        child:Image.asset("images/guru4.jpg",height: 250,width:250,fit: BoxFit.cover,),
                       ),
                       // image
                       const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text("Uganda Museum",style: TextStyle(fontWeight: FontWeight.bold,
-                            color: Colors.white, fontSize: 12),
+                        child: Text("Guruguru Caves",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
                         ),
                         //label to the image
                       ),
@@ -246,101 +246,234 @@ class _PlacesState extends State<Places> {
                   ),
                 ),
                 InkWell(
-                  onTap: ()=> launch('https://www.ugandabudgetsafaris.com/blog/kabakas-palace/'),
+                  onTap: ()=> launch('https://ugandatourismcenter.com/place/st-josephs-cathedral/'),
 
                   child: Stack(
                     //mainAxisAlignment: MainAxisAlignment.center,
                     children:  [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child:Image.asset("images/ka1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                        child:Image.asset("images/sai1.jpg",height: 250,width:250,fit: BoxFit.cover,),
                       ),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text("Kabaka's Palace",style: TextStyle(fontWeight: FontWeight.bold,
-                            color: Colors.white, fontSize: 12),
+                        child: Text("St. Joseph's Cathedral",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
                         ),
                       ),
                     ],
                   ),
                 ),
                 InkWell(
-                  onTap: ()=> launch('https://whc.unesco.org/en/list/1022/'),
+                  onTap: ()=> launch('https://realmafricasafaris.com/ajai-game-reserve/'),
 
                   child: Stack(
                     //mainAxisAlignment: MainAxisAlignment.center,
                     children:  [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child:Image.asset("images/to1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                        child:Image.asset("images/aja2.jpg",height: 250,width:250,fit: BoxFit.cover,),
                       ),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text("Kasubi Tombs",style: TextStyle(fontWeight: FontWeight.bold,
-                            color: Colors.white, fontSize: 12),
+                        child: Text("Ajai Game Reserve",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10),
+            ),
+          ),
+        );
+      case 'Fort Portal':
+        return   Expanded(
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            child: GridView(
+              children: [
+                //Visibility(visible: selectedCity == 'Kampala',
+                // each  inkwell contains the link, image and label to that container
+                InkWell(
+                  onTap: ()=> launch('https://www.ugandaparks.com/national-parks/semuliki-national-park/'),// link to ndere website
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    children:  [
+                      //clipRReact gives an image a shape of your choice
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/s3.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),//adds spacing around the label ndere center
+                        child: Text("Semuliki NP",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('http://nkuruba.com/'),//link to Cultural Center
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/nk2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Lake Nkuruba",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                //Visibility(visible: selectedCity == 'Kampala',
+                InkWell(
+                  onTap: ()=> launch('https://www.kibalenationalparks.com/bigodi-wetland-sanctuary/'),// link to Uganda Museum
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/big1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      // image
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Bigodi Wetlands Sanctuary",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.ugandasafaristours.com/uganda-attractions/amabeere-ga-nyina-mwiru-mysterious-caves-uganda.html'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/ama2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Amabere Caves",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
                         ),
                       ),
                     ],
                   ),
                 ),
                 InkWell(
-                  onTap: ()=> launch('https://ugandatourismcenter.com/place/fort-lugard-museum/'),
+                  onTap: ()=> launch('https://www.tbguganda.org/'),
 
                   child: Stack(
                     //mainAxisAlignment: MainAxisAlignment.center,
                     children:  [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child:Image.asset("images/fort1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                        child:Image.asset("images/bot1.jpg",height: 250,width:250,fit: BoxFit.cover,),
                       ),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text("Fort Lugard",style: TextStyle(fontWeight: FontWeight.bold,
-                            color: Colors.white, fontSize: 12),
+                        child: Text("Tooro Botanical Gardens",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
                         ),
                       ),
                     ],
                   ),
                 ),
                 InkWell(
-                  onTap: ()=> launch('https://www.ugandamartyrsshrine.org.ug/'),
+                  onTap: ()=> launch('https://fortportal.go.ug/tourism-in-fort-portal/#1620868465704-f548eb6c-b0b5'),
 
                   child: Stack(
                     //mainAxisAlignment: MainAxisAlignment.center,
                     children:  [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child:Image.asset("images/shr1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                        child:Image.asset("images/nya1.jpg",height: 250,width:250,fit: BoxFit.cover,),
                       ),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text("Namugongo Shrines",style: TextStyle(fontWeight: FontWeight.bold,
-                            color: Colors.white, fontSize: 12),
+                        child: Text("Nyakasura waterfalls",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
                         ),
                       ),
                     ],
                   ),
                 ),
                 InkWell(
-                  onTap: ()=> launch('https://www.ugandasafaristours.com/blog/naggalabi-buddo-bugandas-coronation-site.html'),
+                  onTap: ()=> launch('https://www.kibalenationalparks.com/'),
 
                   child: Stack(
                     //mainAxisAlignment: MainAxisAlignment.center,
                     children:  [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child:Image.asset("images/naga1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                        child:Image.asset("images/kib1.jpg",height: 250,width:250,fit: BoxFit.cover,),
                       ),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text("Naggalabi-Buddo site",style: TextStyle(fontWeight: FontWeight.bold,
-                            color: Colors.white, fontSize: 12),
+                        child: Text("Kibale NP",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
                         ),
                       ),
                     ],
                   ),
                 ),
+                InkWell(
+                  onTap: ()=> launch('https://www.rwenzorimountainsnationalpark.com/'),
 
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/rwe3.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Mt Rwenzori",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://kihingamiwetlands-com.webnode.com/'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/wet1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Kihingami Wetlands",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
@@ -398,7 +531,7 @@ class _PlacesState extends State<Places> {
                     DropdownMenuItem(value: 'Mbarara', child: Text('Mbarara')),
                     DropdownMenuItem(value: 'Mbale', child: Text('Mbale')),
                     DropdownMenuItem(value: 'Gulu', child: Text('Gulu')),
-                    DropdownMenuItem(value: 'Moronto', child: Text('Moronto')),
+                    DropdownMenuItem(value: 'Moroto', child: Text('Moronto')),
                     DropdownMenuItem(value: 'Arua', child: Text('Arua')),
 
                   ],

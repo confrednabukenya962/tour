@@ -73,9 +73,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         validator: (value) {
                           if (value!.isEmpty) {
                             return "Please enter your email";
-                          }else{
-                            email=value;
-                          }return null;
+                          }
                         },
                         onChanged: (value) {
                           password = value.trim();
@@ -85,26 +83,29 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       Center(
                       child: Row(
-                        children: [
+                        children:[
                           Material(
-                            child: Checkbox(
+                          child: Checkbox(
                               value: isChecked,
                               onChanged: (value) {
-                                setState(() => isChecked = value!);
-                                      //?? false;
-
+                                setState(() {
+                                  isChecked = value ?? false;
+                                });
                               },
-                            ),
+                      ),
                           ),
-
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
-                                Text(
+                                //Visibility(visible: isChecked,
+                               Text(
                                   'Read and accept terms and privacy policy',
                                 )
-                              ],),
+
+                              ],
+
+                          ),
                           ),
                         ],
                       ),
@@ -121,7 +122,9 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
 
                       )
+
                           :
+
                       Container(
                         decoration: const BoxDecoration(
                           color: Colors.black,
@@ -154,7 +157,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                 child: Text(
                                     'Sucessfully Registered.You Can Login Now'),
                               ),
-                              duration: Duration(seconds: 10),
+                              duration: Duration(seconds: 2),
                             ),
                           );
                           //Navigator.of(context).pop();

@@ -67,9 +67,7 @@ class _SignInPageState extends State<SignInPage> {
                         validator: (value){
                           if(value!.isEmpty){
                             return "Please enter your email";
-                          }else{
-                            email=value;
-                          }return null;
+                          }
                         },
                         onChanged: (value) {
                           password = value.trim();

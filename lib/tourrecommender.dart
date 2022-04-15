@@ -8,7 +8,6 @@ class TourRecommenderPage extends StatefulWidget {
 }
 
 class _TourRecommenderPageState extends State<TourRecommenderPage> {
- // bool value = false;
   final notifications = [
     CheckBoxState(title: 'Gorilla trekking'),
     CheckBoxState(title: 'Terrestrial animals'),
