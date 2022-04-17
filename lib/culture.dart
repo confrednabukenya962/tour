@@ -252,7 +252,7 @@ class _CultureState extends State<Culture> {
         );
 
       case 'Fort Portal':
-      //return items for Kampala only
+      //return items for Fort Portal only
         return   Expanded(
           child: Container(
             padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),// adds spacing around the container
@@ -346,8 +346,64 @@ class _CultureState extends State<Culture> {
           ),
         );
 
+      case 'Mbale':
+      //return items for Mbale only
+        return   Expanded(
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),// adds spacing around the container
+            child: GridView(
+              children: [
+                // each  inkwell contains the link, image and label to that container
+                InkWell(
+                  onTap: ()=> launch('https://ugandaradionetwork.com/story/semei-kakungulus-burrial-ground-left-to-waste'),// link to ndere site
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    //clipRReact gives an image a shape of your choice
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/seme1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),// adds spacing around the label ndere center
+                        child: Text("Semei Kakungulu Tombs",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.adventureugandasafari.com/blog/bagisu-male-circumcision-imbalu-a-cultural-norm-in-uganda/'),//link to cultural center website
 
-      default:
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/muto1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Bamutoto Circumcision Site",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                //Visibility(visible: selectedCity == 'Kampala',
+              ],
+              //specify the no of columns in a gridview,
+              // horizontal spacing btn rows
+              //vertical spacing btn columns respectively.
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10),
+            ),
+          ),
+        );
+        default:
       //return all sites or nothing since no city is selected
         return const Visibility(visible: false,
           child:Text('No City Selected'),
@@ -394,7 +450,7 @@ class _CultureState extends State<Culture> {
                     DropdownMenuItem(value: 'Mbarara', child: Text('Mbarara')),
                     DropdownMenuItem(value: 'Mbale', child: Text('Mbale')),
                     DropdownMenuItem(value: 'Gulu', child: Text('Gulu')),
-                    DropdownMenuItem(value: 'Moroto', child: Text('Moronto')),
+                    DropdownMenuItem(value: 'Moroto', child: Text('Moroto')),
                     DropdownMenuItem(value: 'Arua', child: Text('Arua')),
 
                   ],// items in the DropdownMenu

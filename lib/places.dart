@@ -482,6 +482,141 @@ class _PlacesState extends State<Places> {
             ),
           ),
         );
+
+      case 'Mbale':
+        return   Expanded(
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            child: GridView(
+              children: [
+                //Visibility(visible: selectedCity == 'Kampala',
+                // each  inkwell contains the link, image and label to that container
+                InkWell(
+                  onTap: ()=> launch('https://mountelgonnationalpark.com/'),// link to Mt Elgon website
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    children:  [
+                      //clipRReact gives an image a shape of your choice
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/mt2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),//adds spacing around the label ndere center
+                        child: Text("Mt Elgon NP",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.mbaletours.com/attractions/Simu%20and%20Sisi%20Falls.html'),//link to Cultural Center
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/sisi.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Simu & Sisi Falls",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                //Visibility(visible: selectedCity == 'Kampala',
+                InkWell(
+                  onTap: ()=> launch('https://www.mbaletours.com/attractions/Bufumbo%20and%20Wanala%20Forest%20reserves.html'),// link to Uganda Museum
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/bufu1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      // image
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Bufumbo & Wanala Forest Reserves",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.mbaletours.com/attractions/Bulegeni%20and%20Butandinga%20Cliffs%20&%20Ridges.html'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/bule1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Bulegeni and Butandinga Cliffs/Ridges",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.mbaletours.com/attractions/Bulukyeke%20&%20Bukigai%20Hills.html'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/bb1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Bulukyeke & Bukigai Hills",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.achieveglobalsafaris.com/nyero-rock-paintings/'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/nye1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Nyero Rock Paintings",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10),
+            ),
+          ),
+        );
         default:
       //return all sites or nothing since no city is selected
         return Visibility(visible: false,
@@ -489,8 +624,6 @@ class _PlacesState extends State<Places> {
         );
     }
   }
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -531,7 +664,7 @@ class _PlacesState extends State<Places> {
                     DropdownMenuItem(value: 'Mbarara', child: Text('Mbarara')),
                     DropdownMenuItem(value: 'Mbale', child: Text('Mbale')),
                     DropdownMenuItem(value: 'Gulu', child: Text('Gulu')),
-                    DropdownMenuItem(value: 'Moroto', child: Text('Moronto')),
+                    DropdownMenuItem(value: 'Moroto', child: Text('Moroto')),
                     DropdownMenuItem(value: 'Arua', child: Text('Arua')),
 
                   ],
