@@ -617,6 +617,237 @@ class _PlacesState extends State<Places> {
             ),
           ),
         );
+
+      case 'Jinja':
+        return   Expanded(
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            child: GridView(
+              children: [
+                //Visibility(visible: selectedCity == 'Kampala',
+                // each  inkwell contains the link, image and label to that container
+                InkWell(
+                  onTap: ()=> launch('https://www.jinjatours.com/things-to-do-in-jinja/golfing-in-jinja/'),// link to Mt Elgon website
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    children:  [
+                      //clipRReact gives an image a shape of your choice
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/golf.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),//adds spacing around the label ndere center
+                        child: Text("Jinja Golf Club",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.jinjasailingclub.com/'),//link to Cultural Center
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/sai.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Jinja Sailing Club",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://ugandatourismcenter.com/place/itanda-falls/'),//link to Cultural Center
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/ita1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Itanda Falls",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                //Visibility(visible: selectedCity == 'Kampala',
+                InkWell(
+                  onTap: ()=> launch('https://jinja.go.ug/opportunites/nile'),// link to Uganda Museum
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/sou2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      // image
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Source of River Nile",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.jinjatours.com/tourist-attractions/bujagali-falls/'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/bujag2.jpeg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Bujagali Falls",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.jinjatours.com/tourist-attractions/mabira-rainforest/'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/mab1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Mabira Forest",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.destimap.com/index.php?act=attraction&a=Nile-Reptile-Park%2C-Jinja%2C-Uganda'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/rept1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Nile Reptile Park",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.jinjatours.com/tourist-attractions/ssezibwa-falls/'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/sse1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Ssezibwa Falls",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.jinjatours.com/tourist-attractions/buguge-historical-site/'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/bugug1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Buguge Historical Site",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.jinjatours.com/tourist-attractions/wako-zibondos-palace/'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/wako1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Wako Zibondo's Palace",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.jinjatours.com/tourist-attractions/kaguru-hill/'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/kagu1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Kagulu Hill",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10),
+            ),
+          ),
+        );
         default:
       //return all sites or nothing since no city is selected
         return Visibility(visible: false,

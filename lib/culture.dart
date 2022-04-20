@@ -403,6 +403,150 @@ class _CultureState extends State<Culture> {
             ),
           ),
         );
+
+      case 'Jinja':
+      //return items for Mbale only
+        return   Expanded(
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),// adds spacing around the container
+            child: GridView(
+              children: [
+                // each  inkwell contains the link, image and label to that container
+                InkWell(
+                  onTap: ()=> launch('https://www.jinjatours.com/tourist-attractions/kyabazinga-royal-palace/'),// link to Busoga king's Palace site
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    //clipRReact gives an image a shape of your choice
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/buso1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),// adds spacing around the label ndere center
+                        child: Text("Busoga King’s Palace",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://ugandatourismcenter.com/place/budhumbula-palaceshrine/'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/bud1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Budhumbula Shrine",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.greatadventuresafaris.com/speke-memorial-monument-in-jinja-uganda/'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/spe2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Speke Memorial Monument",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.greatadventuresafaris.com/speke-memorial-monument-in-jinja-uganda/'),//link to cultural center website
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/muse1.jpeg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Source of the Nile Museum",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://muafrikaadventures.com/what-to-see-on-your-bujagali-caves-visit/'),//link to cultural center website
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/buj2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Bujagali Caves",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.jinjatours.com/tourist-attractions/mahatma-gandhi-monument-in-jinja/'),//link to cultural center website
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/mat.jpeg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Mahatma Gandhi Monument",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.cybo.com/UG-biz/jinja-temple'),//link to cultural center website
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/hi2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Hindu Temple",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                //Visibility(visible: selectedCity == 'Kampala',
+              ],
+              //specify the no of columns in a gridview,
+              // horizontal spacing btn rows
+              //vertical spacing btn columns respectively.
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10),
+            ),
+          ),
+        );
         default:
       //return all sites or nothing since no city is selected
         return const Visibility(visible: false,

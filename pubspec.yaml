@@ -173,6 +173,30 @@ flutter:
      - images/mb1.jpg
      - images/da2.jpg
      - images/el1.jpg
+     - images/buso1.jpg
+     - images/bud1.jpg
+     - images/spe2.jpg
+     - images/muse1.jpeg
+     - images/buj2.jpg
+     - images/mat.jpeg
+     - images/hi2.jpg
+     - images/golf.jpg
+     - images/sai.jpg
+     - images/ita1.jpg
+     - images/sou2.jpg
+     - images/bujag2.jpeg
+     - images/mab1.jpg
+     - images/rept1.jpg
+     - images/sse1.jpg
+     - images/bugug1.jpg
+     - images/wako1.jpg
+     - images/kagu1.jpg
+     - images/bou1.jpg
+     - images/2f.jpg
+     - images/vel3.jpg
+     - images/cas2.jpg
+     - images/som1.jpg
+     - images/bou2.jpg
 
 
 
@@ -184,7 +208,22 @@ flutter:
 
 
 
-  # An image asset can refer to one or more resolution-specific "variants", see
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
   # For details regarding adding assets from package dependencies, see
