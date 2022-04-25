@@ -557,7 +557,7 @@ class _CultureState extends State<Culture> {
               children: [
                 // each  inkwell contains the link, image and label to that container
                 InkWell(
-                  onTap: ()=> launch('  https://ugandatourismcenter.com/place/kigungu-the-birthplace-of-catholicism/'),// link to Busoga king's Palace site
+                  onTap: ()=> launch('https://ugandatourismcenter.com/place/kigungu-the-birthplace-of-catholicism/'),// link to Busoga king's Palace site
                   // stack allows us to put something of top of the other
                   child: Stack(
                     //clipRReact gives an image a shape of your choice
@@ -588,6 +588,141 @@ class _CultureState extends State<Culture> {
                         padding: EdgeInsets.all(8.0),
                         child: Text("Muzinga Square Park",style: TextStyle(fontWeight: FontWeight.bold,
                             color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                //Visibility(visible: selectedCity == 'Kampala',
+              ],
+              //specify the no of columns in a gridview,
+              // horizontal spacing btn rows
+              //vertical spacing btn columns respectively.
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10),
+            ),
+          ),
+        );
+
+      case 'Mbarara':
+      //return items for Mbarara only
+        return   Expanded(
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),// adds spacing around the container
+            child: GridView(
+              children: [
+                // each  inkwell contains the link, image and label to that container
+                InkWell(
+                  onTap: ()=> launch('https://www.igongo.co.ug/'),// link to Busoga king's Palace site
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    //clipRReact gives an image a shape of your choice
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/Igo1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),// adds spacing around the label ndere center
+                        child: Text("Igongo Cultural center",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://mapcarta.com/N7222485195'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/ank1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Ankole Kingdom Palace",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://www.junglesafarisuganda.com/attractions/itaaba-kyabanyoro.html'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/itaa1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Itaaba Kyabanyoro",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://mbararatours.com/attractions/sanga-cultural-village.html'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/san1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Sanga Cultural Village",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://www.ugandasafaristours.com/blog/ankole-nkokonjeru-royal-tombs.html'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/nkoko1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Nkokonjeru Tombs",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('http://www.mbarara.go.ug/publication/cultural-sites'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/rwenj1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Rwenjeru Community Campsite",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
                         ),
                       ),
                     ],

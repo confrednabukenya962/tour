@@ -735,6 +735,143 @@ class _NightLifeState extends State<NightLife> {
             ),
           ),
         );
+
+      case 'Mbarara':
+        return   Expanded(
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            child: GridView(
+              children: [
+                //Visibility(visible: selectedCity == 'Kampala',
+                // each  inkwell contains the link, image and label to that container
+                InkWell(
+                  onTap: ()=> launch('https://www.africabizinfo.com/UG/nicoz-pub-039-2945669'),// link to Club El Tanjia website
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    children:  [
+                      //clipRReact gives an image a shape of your choice
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/nico1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),//adds spacing around the label ndere center
+                        child: Text("Nico’z Pub",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.africabizinfo.com/UG/the-heat'),// link to ndere website
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    children:  [
+                      //clipRReact gives an image a shape of your choice
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/heat1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),//adds spacing around the label ndere center
+                        child: Text("Heat Bar",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://vymaps.com/UG/Club-Vision-Empire-149870101744104/'),// link to ndere website
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    children:  [
+                      //clipRReact gives an image a shape of your choice
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/vis1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),//adds spacing around the label ndere center
+                        child: Text("Club Vision Empire ",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.africabizinfo.com/UG/club-vegas-mbarara'),// link to ndere website
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    children:  [
+                      //clipRReact gives an image a shape of your choice
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/veg1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),//adds spacing around the label ndere center
+                        child: Text("Vegas Club",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://mapsus.net/UG/desert-lounge-mbarara-11709'),// link to ndere website
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    children:  [
+                      //clipRReact gives an image a shape of your choice
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/desert2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),//adds spacing around the label ndere center
+                        child: Text("Desert Lounge",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.africabizinfo.com/UG/majestic-0772-444265'),// link to ndere website
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    children:  [
+                      //clipRReact gives an image a shape of your choice
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/maj.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),//adds spacing around the label ndere center
+                        child: Text("Majestic",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10),
+            ),
+          ),
+        );
         default:
       //return all sites or nothing since no city is selected
         return Visibility(visible: false,

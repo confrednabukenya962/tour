@@ -1015,7 +1015,7 @@ class _PlacesState extends State<Places> {
                   ),
                 ),
                 InkWell(
-                  onTap: ()=> launch(' https://ngambaisland.org/'),
+                  onTap: ()=> launch('https://ngambaisland.org/'),
 
                   child: Stack(
                     //mainAxisAlignment: MainAxisAlignment.center,
@@ -1123,6 +1123,256 @@ class _PlacesState extends State<Places> {
                         padding: EdgeInsets.all(8.0),
                         child: Text("Bafrika Creationz",style: TextStyle(fontWeight: FontWeight.bold,
                             color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10),
+            ),
+          ),
+        );
+
+      case 'Mbarara':
+        return   Expanded(
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            child: GridView(
+              children: [
+                //Visibility(visible: selectedCity == 'Kampala',
+                // each  inkwell contains the link, image and label to that container
+                InkWell(
+                  onTap: ()=> launch('https://www.lakemburo.com/'),// link to Mt Elgon website
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    children:  [
+                      //clipRReact gives an image a shape of your choice
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/mburo3.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),//adds spacing around the label ndere center
+                        child: Text("Lake Mburo NP",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.queenelizabethparkuganda.com/information/how-to-get-to-queen-elizabeth-national-park/'),//link to Cultural Center
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/qe1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Queen Elizabeth Park",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.kideponationalpark.com/information/getting-to-bwindi-impenetrable-national-park/'),//link to Cultural Center
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/bwindi3.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Bwindi NP",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                //Visibility(visible: selectedCity == 'Kampala',
+                InkWell(
+                  onTap: ()=> launch('https://fortuneofafrica.com/ug/ankole-long-horn-cattle/'),// link to Uganda Museum
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/lng1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      // image
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Ankole Long Horned Cattle",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                        //label to the image
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.must.ac.ug/'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/must2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Mbarara University",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('http://ntareschool.sc.ug/'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/ntare1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Ntare School",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.ankolediocese.org/'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/archi1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Ankole Diocese",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.yellow.ug/company/1512/all-saints-church-mbarara'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/saint1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("All Saints Church",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://mbararatours.com/attractions/lake-nakivale.html'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/ln1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Lake Nakivale",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.mbararatours.com/attractions/river-rwizi.html'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/rwi1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("River Ruizi",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.aloeus.com/mbarara-golf-club-mbarara/'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/cou1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Mbarara Golf Course",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.trip.com/travel-guide/attraction/mbarara-municipality/crater-lakes-adventures-55823111/'),
+
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/crater1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Crater Lakes Adventure",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
                         ),
                       ),
                     ],
