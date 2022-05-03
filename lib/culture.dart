@@ -741,7 +741,67 @@ class _CultureState extends State<Culture> {
             ),
           ),
         );
-        default:
+
+      case 'Kasese':
+      //return items for Entebbe only
+        return   Expanded(
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),// adds spacing around the container
+            child: GridView(
+              children: [
+                // each  inkwell contains the link, image and label to that container
+                InkWell(
+                  onTap: ()=> launch('http://www.busongora-chwezi.org/history/ikamiro-palace'),// link to Busoga king's Palace site
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    //clipRReact gives an image a shape of your choice
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/ikami2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),// adds spacing around the label ndere center
+                        child: Text("Ikamiro Royal Palace",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://fortuneofafrica.com/ug/rwenzururu-kingdom/'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/rwezuru.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Rwenzururu Kingdom",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.black, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                //Visibility(visible: selectedCity == 'Kampala',
+              ],
+              //specify the no of columns in a gridview,
+              // horizontal spacing btn rows
+              //vertical spacing btn columns respectively.
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10),
+            ),
+          ),
+        );
+
+      default:
       //return all sites or nothing since no city is selected
         return const Visibility(visible: false,
           child:Text('No City Selected'),
@@ -788,8 +848,7 @@ class _CultureState extends State<Culture> {
                     DropdownMenuItem(value: 'Mbarara', child: Text('Mbarara')),
                     DropdownMenuItem(value: 'Mbale', child: Text('Mbale')),
                     DropdownMenuItem(value: 'Gulu', child: Text('Gulu')),
-                    DropdownMenuItem(value: 'Moroto', child: Text('Moroto')),
-                    DropdownMenuItem(value: 'Arua', child: Text('Arua')),
+                    DropdownMenuItem(value: 'Kasese', child: Text('Kasese')),
 
                   ],// items in the DropdownMenu
                   onChanged: (value) {
