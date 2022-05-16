@@ -34,10 +34,10 @@ class _ForeignMissionsState extends State<ForeignMissions> {
         children:[
            const SizedBox(height: 15,),
           const Padding(
-            padding:  EdgeInsets.only(left: 25.0,right: 15.0),
+            padding:  EdgeInsets.only(left: 30.0,right: 30.0),
             child: Text(
-              "Websites of foreign missions and embassies based in Kampala,Uganda, are listed below,",
-              textAlign: TextAlign.center,
+              "Websites of foreign missions and embassies based in Kampala, Uganda are listed below,",
+              //textAlign: TextAlign.center,
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 15
