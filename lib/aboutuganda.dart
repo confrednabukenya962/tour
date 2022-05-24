@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tour/cityride.dart';
 import 'package:tour/foreigns.dart';
 import 'package:tour/passport&visa.dart';
 import 'package:tour/restaurant_eateries.dart';
@@ -213,24 +214,22 @@ class _AboutUgandaState extends State<AboutUganda> {
           ),
             InkWell(
               onTap: (){
-                // Navigator.push(context,MaterialPageRoute(builder: (context)=>const ServiceReviews1()));
+                 Navigator.push(context,MaterialPageRoute(builder: (context)=>const CityRides()));
               },
-              child: Container(
-                decoration:const BoxDecoration(  color:Color(0xffbdbdbd),
-                  border: Border(bottom: BorderSide(
-                    color: Colors.lightBlue,
-                    width: 2,
+              child: Stack(
+                //clipRReact gives an image a shape of your choice
+                children:  [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(15.0),
+                    child:Image.asset("images/sb2.png",height: 250,width:250,fit: BoxFit.cover,),
                   ),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),// adds spacing around the label ndere center
+                    child: Text("City Rides",style: TextStyle(fontWeight: FontWeight.bold,
+                        color: Colors.white, fontSize: 12),
+                    ),
                   ),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    //Image.asset("images/tourist.jpg",height: 35,),const SizedBox(height: 25,),
-                    Text("City Rides",style:  TextStyle(fontWeight: FontWeight.bold,
-                        color: Colors.black, fontSize: 12),),
-                  ],
-                ),
+                ],
               ),
             ),
           InkWell(
@@ -287,7 +286,7 @@ class _AboutUgandaState extends State<AboutUganda> {
 /*
 children: const [
                     //Image.asset("images/tourist.jpg",height: 35,),const SizedBox(height: 25,),
-                    Text("Foreign Missions",style:  TextStyle(fontWeight: FontWeight.bold,
+                    Text("City Rides",style:  TextStyle(fontWeight: FontWeight.bold,
                         color: Colors.black, fontSize: 12),),
                   ],
 

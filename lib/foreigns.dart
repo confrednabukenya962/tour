@@ -138,6 +138,100 @@ class _ForeignMissionsState extends State<ForeignMissions> {
                     child: const Text(' https://visalist.io/new-zealand/visa-requirements/uganda',
                       textAlign: TextAlign.center, style: TextStyle(color: Colors.blue,fontSize: 12),));
               }),
+
+          const Text('Belgium',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.black,fontSize: 15),),
+          Link(uri: Uri.parse("https://uganda.diplomatie.belgium.be/en/embassy-kampala"),
+              target: LinkTarget.blank,
+              builder: (context,followLink){
+                return TextButton(onPressed: followLink,
+                    child: const Text('https://uganda.diplomatie.belgium.be/en/embassy-kampala',
+                      textAlign: TextAlign.center, style: TextStyle(color: Colors.blue,fontSize: 12),));
+              }),
+          const Text('European Union',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.black,fontSize: 15),),
+          Link(uri: Uri.parse("https://www.eeas.europa.eu/delegations/uganda_en?s=127"),
+              target: LinkTarget.blank,
+              builder: (context,followLink){
+                return TextButton(onPressed: followLink,
+                    child: const Text('https://www.eeas.europa.eu/delegations/uganda_en?s=127',
+                      textAlign: TextAlign.center, style: TextStyle(color: Colors.blue,fontSize: 12),));
+              }),
+          const Text('Denmark',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.black,fontSize: 15),),
+          Link(uri: Uri.parse("https://uganda.um.dk/en"),
+              target: LinkTarget.blank,
+              builder: (context,followLink){
+                return TextButton(onPressed: followLink,
+                    child: const Text('https://uganda.um.dk/en',
+                      textAlign: TextAlign.center, style: TextStyle(color: Colors.blue,fontSize: 12),));
+              }),
+          const Text('Ireland',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.black,fontSize: 15),),
+          Link(uri: Uri.parse("https://www.dfa.ie/irish-embassy/uganda/"),
+              target: LinkTarget.blank,
+              builder: (context,followLink){
+                return TextButton(onPressed: followLink,
+                    child: const Text('https://www.dfa.ie/irish-embassy/uganda/',
+                      textAlign: TextAlign.center, style: TextStyle(color: Colors.blue,fontSize: 12),));
+              }),
+          const Text('Italy',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.black,fontSize: 15),),
+          Link(uri: Uri.parse("https://embassies.info/ItalianEmbassyinKampalaUganda"),
+              target: LinkTarget.blank,
+              builder: (context,followLink){
+                return TextButton(onPressed: followLink,
+                    child: const Text('https://embassies.info/ItalianEmbassyinKampalaUganda',
+                      textAlign: TextAlign.center, style: TextStyle(color: Colors.blue,fontSize: 12),));
+              }),
+          const Text('Iceland',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.black,fontSize: 15),),
+          Link(uri: Uri.parse("https://www.government.is/diplomatic-missions/embassy-of-iceland-in-kampala/"),
+              target: LinkTarget.blank,
+              builder: (context,followLink){
+                return TextButton(onPressed: followLink,
+                    child: const Text('https://www.government.is/diplomatic-missions/embassy-of-iceland-in-kampala/',
+                      textAlign: TextAlign.center, style: TextStyle(color: Colors.blue,fontSize: 12),));
+              }),
+
+          const Text('Russia',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.black,fontSize: 15),),
+          Link(uri: Uri.parse("https://embassies.info/RussianEmbassyinKampalaUganda"),
+              target: LinkTarget.blank,
+              builder: (context,followLink){
+                return TextButton(onPressed: followLink,
+                    child: const Text('https://embassies.info/RussianEmbassyinKampalaUganda',
+                      textAlign: TextAlign.center, style: TextStyle(color: Colors.blue,fontSize: 12),));
+              }),
+          const Text('Turkey',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.black,fontSize: 15),),
+          Link(uri: Uri.parse("https://embassies.info/TurkishEmbassyinKampalaUganda"),
+              target: LinkTarget.blank,
+              builder: (context,followLink){
+                return TextButton(onPressed: followLink,
+                    child: const Text('https://embassies.info/TurkishEmbassyinKampalaUganda',
+                      textAlign: TextAlign.center, style: TextStyle(color: Colors.blue,fontSize: 12),));
+              }),
+          const Text('Britain',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.black,fontSize: 15),),
+          Link(uri: Uri.parse("https://www.gov.uk/world/organisations/british-high-commission-kampala"),
+              target: LinkTarget.blank,
+              builder: (context,followLink){
+                return TextButton(onPressed: followLink,
+                    child: const Text('https://www.gov.uk/world/organisations/british-high-commission-kampala',
+                      textAlign: TextAlign.center, style: TextStyle(color: Colors.blue,fontSize: 12),));
+              }),
+
+
         ],
       ),
           ),
