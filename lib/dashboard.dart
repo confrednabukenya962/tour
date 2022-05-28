@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tour/aboutuganda.dart';
 import 'package:tour/airlinesflights.dart';
 import 'package:tour/airporttransport.dart';
-import 'package:tour/crafts&shopping.dart';
+import 'package:tour/crafts_shopping.dart';
 import 'package:tour/culture&entertainment.dart';
 import 'package:tour/lodging.dart';
 import 'package:tour/servicereviews.dart';
