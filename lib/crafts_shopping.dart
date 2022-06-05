@@ -9,8 +9,6 @@ class CraftsShopping extends StatefulWidget {
 }
 
 class _CraftsShoppingState extends State<CraftsShopping> {
-  final items = ['Kampala', 'Jinja', 'Entebbe', 'Fort Portal', 'Mbarara',
-    'Mbale', 'Gulu', 'Moronto', 'Arua'];
   String? selectedCity;
 
   Widget crafts() {
@@ -380,14 +378,14 @@ class _CraftsShoppingState extends State<CraftsShopping> {
               children: [
                 // each  inkwell contains the link, image and label to that container
                 InkWell(
-                  onTap: ()=> launch('https://www.tripadvisor.com/Attraction_Review-g480250-d12399819-Reviews-Cuupa_Arts_Gallery-Jinja_Eastern_Region.html'),// link to ndere site
+                  onTap: ()=> launch('https://www.inspirock.com/uganda/entebbe/entebbe-crafts-village-a6321011423'),// link to ndere site
                   // stack allows us to put something of top of the other
                   child: Stack(
                     //clipRReact gives an image a shape of your choice
                     children:  [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child:Image.asset("images/cag2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                        child:Image.asset("images/ecv2.JPG",height: 250,width:250,fit: BoxFit.cover,),
                       ),
                       const Padding(
                         padding: EdgeInsets.all(8.0),// adds spacing around the label ndere center
@@ -399,17 +397,17 @@ class _CraftsShoppingState extends State<CraftsShopping> {
                   ),
                 ),
                 InkWell(
-                  onTap: ()=> launch('https://www.inspirock.com/uganda/jinja/jinja-art-studio-a3449656737'),//link to cultural center website
+                  onTap: ()=> launch('https://www.bafrikacreationz.com/'),//link to cultural center website
 
                   child: Stack(
                     children:  [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child:Image.asset("images/jas4.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                        child:Image.asset("images/bc1.jpg",height: 250,width:250,fit: BoxFit.cover,),
                       ),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text("Jinja Art Studio",style: TextStyle(fontWeight: FontWeight.bold,
+                        child: Text("Bafrika Creationz Art Gallery",style: TextStyle(fontWeight: FontWeight.bold,
                             color: Colors.white, fontSize: 12),
                         ),
                       ),
@@ -418,17 +416,17 @@ class _CraftsShoppingState extends State<CraftsShopping> {
                 ),
 
                 InkWell(
-                  onTap: ()=> launch('https://www.askaname.com/en/ug/1921_mothers-of-hope-art-shop'),//link to cultural center website
+                  onTap: ()=> launch('https://gatelyinn.com/craft-shop/'),//link to cultural center website
 
                   child: Stack(
                     children:  [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child:Image.asset("images/moh1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                        child:Image.asset("images/ac1.jpg",height: 250,width:250,fit: BoxFit.cover,),
                       ),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text("Mothers Of Hope Craft Shop",style: TextStyle(fontWeight: FontWeight.bold,
+                        child: Text("Entebbe Art & Craft Shop",style: TextStyle(fontWeight: FontWeight.bold,
                             color: Colors.white, fontSize: 12),
                         ),
                       ),
@@ -437,17 +435,17 @@ class _CraftsShoppingState extends State<CraftsShopping> {
                 ),
 
                 InkWell(
-                  onTap: ()=> launch('https://adauganda.com/listings/local-flavours/'),//link to cultural center website
+                  onTap: ()=> launch('https://www.papercraftafrica.com/index.php'),//link to cultural center website
 
                   child: Stack(
                     children:  [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child:Image.asset("images/lf5.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                        child:Image.asset("images/pca4.jpg",height: 250,width:250,fit: BoxFit.cover,),
                       ),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text("Local Flavours",style: TextStyle(fontWeight: FontWeight.bold,
+                        child: Text("Paper Craft Africa",style: TextStyle(fontWeight: FontWeight.bold,
                             color: Colors.white, fontSize: 12),
                         ),
                       ),
@@ -456,17 +454,17 @@ class _CraftsShoppingState extends State<CraftsShopping> {
                 ),
 
                 InkWell(
-                  onTap: ()=> launch('https://vymaps.com/UG/Kilombera-Weaving-1975035882508884/'),//link to cultural center website
+                  onTap: ()=> launch('https://www.inspirock.com/uganda/entebbe/kampala-fair-in-entebbe-a2578462715'),//link to cultural center website
 
                   child: Stack(
                     children:  [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child:Image.asset("images/kw3.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                        child:Image.asset("images/kf1.jpg",height: 250,width:250,fit: BoxFit.cover,),
                       ),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text("Kilombera Weaving",style: TextStyle(fontWeight: FontWeight.bold,
+                        child: Text("Kampala Fair",style: TextStyle(fontWeight: FontWeight.bold,
                             color: Colors.white, fontSize: 12),
                         ),
                       ),
@@ -475,23 +473,235 @@ class _CraftsShoppingState extends State<CraftsShopping> {
                 ),
 
                 InkWell(
-                  onTap: ()=> launch('https://beauty-for-ashes-crafts-innovations.business.site/'),//link to cultural center website
+                  onTap: ()=> launch('https://seynaartgallery.org/'),//link to cultural center website
 
                   child: Stack(
                     children:  [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
-                        child:Image.asset("images/bf2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                        child:Image.asset("images/sag2.jpg",height: 250,width:250,fit: BoxFit.cover,),
                       ),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text("Beauty For Ashes Crafts Innovations",style: TextStyle(fontWeight: FontWeight.bold,
+                        child: Text("Seyna Art Gallery",style: TextStyle(fontWeight: FontWeight.bold,
                             color: Colors.white, fontSize: 12),
                         ),
                       ),
                     ],
                   ),
                 ),
+
+                InkWell(
+                  onTap: ()=> launch('https://kampalakit.com/'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/kk1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Kampala Kit",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://hakuna-matata-crafts-shop.business.site/'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/hm1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Hakuna Matata souveniors",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://www.africabizinfo.com/UG/artisan-market'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/am3.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Artisan Market",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://www.facebook.com/pages/category/Non-Governmental-Organization--NGO-/Tembo-Art-Craft-Village-2015135328704996/'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/tac1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Tembo Art and Craft Center",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                //Visibility(visible: selectedCity == 'Kampala',
+
+              ],
+              //specify the no of columns in a gridview,
+              // horizontal spacing btn rows
+              //vertical spacing btn columns respectively.
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10),
+            ),
+          ),
+        );
+
+      case 'Fort Portal':
+      //return items for Kampala only
+        return   Expanded(
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),// adds spacing around the container
+            child: GridView(
+              children: [
+                // each  inkwell contains the link, image and label to that container
+                InkWell(
+                  onTap: ()=> launch('https://www.tripadvisor.com/Restaurant_Review-g608446-d13971607-Reviews-Amaani_Rwenzori-Fort_Portal_Western_Region.html'),// link to ndere site
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    //clipRReact gives an image a shape of your choice
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/ar2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),// adds spacing around the label ndere center
+                        child: Text("Amaani Rwenzori",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.engabuzatooro.or.ug/'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/ezt1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Engabu Za Tooro",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://tooro-gallery.business.site/'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/tg1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Tooro Gallery",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('http://www.jabulaniartshub.org/'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/jag5.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Jabulani Art Gallery & Cultural Hub",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://www.africabizinfo.com/UG/marys-craft-shop'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/mcg1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Mary’s Craft Shop",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://www.facebook.com/David-Craft-Leather-1192662900898987/'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/dcs4.jpeg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Dave Craft Shop",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
                 //Visibility(visible: selectedCity == 'Kampala',
 
               ],
