@@ -853,6 +853,355 @@ class _CraftsShoppingState extends State<CraftsShopping> {
         );
 
 
+      case 'Kasese':
+      //return items for Kampala only
+        return   Expanded(
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),// adds spacing around the container
+            child: GridView(
+              children: [
+                // each  inkwell contains the link, image and label to that container
+                InkWell(
+                  onTap: ()=> launch('https://www.workaway.info/en/host/831443951434'),// link to ndere site
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    //clipRReact gives an image a shape of your choice
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/rcc1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),// adds spacing around the label ndere center
+                        child: Text("Rwenzori child care craft shop",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.kasese.go.ug/tour-destinations/crafts-and-souvenir-industry/'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/cs1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Crafts & Souvenir",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://vymaps.com/UG/Mukisa-Crafts-Souvenir-Shop-155802567934412/'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/mc4.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Mukisa Crafts & Souvenir Shop",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://www.google.com/maps/place/sara+craft+shop/@-0.0316394,30.1489508,15z/data=!4m5!3m4!1s0x0:0xc7e9e1191254cf11!8m2!3d-0.0316394!4d30.1489508'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/sc1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Sara Craft Shop",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                //Visibility(visible: selectedCity == 'Kampala',
+
+              ],
+              //specify the no of columns in a gridview,
+              // horizontal spacing btn rows
+              //vertical spacing btn columns respectively.
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10),
+            ),
+          ),
+        );
+
+      case 'Gulu':
+      //return items for Kampala only
+        return   Expanded(
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),// adds spacing around the container
+            child: GridView(
+              children: [
+                // each  inkwell contains the link, image and label to that container
+                InkWell(
+                  onTap: ()=> launch('https://www.facebook.com/GuluCraftVillage/'),// link to ndere site
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    //clipRReact gives an image a shape of your choice
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/gcv1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),// adds spacing around the label ndere center
+                        child: Text("Gulu Craft Village",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://www.tripadvisor.com/Attraction_Review-g644030-d23781433-Reviews-Solerosso_Crafts-Gulu_Northern_Region.html'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/sco1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Solerosso Crafts",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://www.gulumade.com/'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/gm1.jpeg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Gulu made",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://yellow.place/en/taks-community-art-centre-gulu-uganda'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/tak2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("TAKS Art Centre",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://www.wawotokacelcooperative.com/'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/wkc2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Wawoto KC Society",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://amaniafrica.org/'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/ayj7.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Amani Ya Juu",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://artfactory687840530.wordpress.com/'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/afs3.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Art Factory Studio",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://www.museumeta.com/UG/Gulu/378229168971696/Nena-croche%C3%A8'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/nc6.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Nena Crochee",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                //Visibility(visible: selectedCity == 'Kampala',
+
+              ],
+              //specify the no of columns in a gridview,
+              // horizontal spacing btn rows
+              //vertical spacing btn columns respectively.
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10),
+            ),
+          ),
+        );
+
+      case 'Mbale':
+      //return items for Kampala only
+        return   Expanded(
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),// adds spacing around the container
+            child: GridView(
+              children: [
+                // each  inkwell contains the link, image and label to that container
+                InkWell(
+                  onTap: ()=> launch('https://www.tripadvisor.com/Attraction_Review-g668276-d20046714-Reviews-Abongo_Creative_Crafts-Mbale_Eastern_Region.html'),// link to ndere site
+                  // stack allows us to put something of top of the other
+                  child: Stack(
+                    //clipRReact gives an image a shape of your choice
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/acc1.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),// adds spacing around the label ndere center
+                        child: Text("Abongo Creative Crafts",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: ()=> launch('https://ug.loozap.com/ads/african-craft-beads-maasai-sandals-mbale/3684433.html'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/acb2.jpg",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("African Craft Beads Maasai Sandals",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> launch('https://mapcarta.com/W382658566'),//link to cultural center website
+
+                  child: Stack(
+                    children:  [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child:Image.asset("images/swcs1.png",height: 250,width:250,fit: BoxFit.cover,),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Sipi Women’s Craft Shop",style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Colors.white, fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                //Visibility(visible: selectedCity == 'Kampala',
+
+              ],
+              //specify the no of columns in a gridview,
+              // horizontal spacing btn rows
+              //vertical spacing btn columns respectively.
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10),
+            ),
+          ),
+        );
+
+
       default:
       //return all sites or nothing since no city is selected
         return Visibility(visible: false,

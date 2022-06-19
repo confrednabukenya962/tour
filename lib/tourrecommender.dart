@@ -24,30 +24,42 @@ class _TourRecommenderPageState extends State<TourRecommenderPage> {
   @override
   Widget build(BuildContext context) {
 
-    return Scaffold(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        backgroundColor: const Color(0XFF2A351F),
+      ),
+      //
+      // backgroundColor: Colors.greenAccent,
+      home: Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: Colors.greenAccent,
+      appBar: AppBar(
+      backgroundColor: const Color(0XFF2A351F),
+      title: const Text("Tour Recommender",
+      style: TextStyle(color: Colors.white,
+      ),
+      ),
+      ),
 
       body: SingleChildScrollView(
         child: Container(
-          padding: const EdgeInsets.all(32),
+         // padding: const EdgeInsets.all(32),
+          padding:const EdgeInsets.fromLTRB(25.0,20.0,15.0,15.0),
           child: Column(
             children:  [
-              const SizedBox(height: 35,),
-                const Text(
-                  "Tour Recommender",
-                  style: TextStyle( fontWeight: FontWeight.bold,fontSize: 20,
-                    color: Colors.deepPurple,),
-                ),
-              const SizedBox(height: 10,),
-              const Text("Select items for your preferred tourism experience ",
-                  style: TextStyle(
-                      color: Colors.deepPurpleAccent,
-                      fontSize: 15
-                  ),
-                ),
+              //const SizedBox(height: 5,),
+          const Text("Select items for your preferred tourism experience ",
+            style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 15),),
+           /* style: TextStyle(
+              //color: Colors.deepPurpleAccent,
+                color: Colors.black,
+                fontSize: 15
+            ),*/
 
-              //SizedBox(height: 3,),
+                //const Text(
+                 // "Tour Recommender",
+                 // style: TextStyle( fontWeight: FontWeight.bold,fontSize: 20,
+                 //   color: Colors.deepPurple,),
               ListView(
                 scrollDirection: Axis.vertical,
                 shrinkWrap: true,
@@ -77,7 +89,7 @@ class _TourRecommenderPageState extends State<TourRecommenderPage> {
 
       ),
 
-
+      ),
     );
   }
 
